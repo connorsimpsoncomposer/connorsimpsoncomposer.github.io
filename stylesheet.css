@@ -1,369 +1,338 @@
+
+/*
+ * stylesheet for connorsimpsonmusic.com
+ *
+ * Sections:
+ * GENERAL STYLING
+ * HEADER
+ * FOOTER
+ * INDEX PAGE
+ * LISTEN PAGE
+ * WORKS PAGE
+ * CONTACT PAGE
+ */
+
+/* ==================================================
+                 GENERAL STYLING
+   ================================================== */
+
 body {
-    font-family: 'Proxima-nova', sans-serif;
-    margin: 0px;
+  font-family: 'Lato';
+  margin: 0;
 }
 
 .body-container {
-    min-height: 100vh;
-    position: relative;
+  min-height: 100vh;
+  position: relative;
 }
-  
+
 .content-wrap {
-    margin: 0px;
-    padding-bottom: 4.5rem;
-    height: auto;
+  margin: 0;
+  padding-bottom: 4.5rem;
+  height: auto;
 }
 
 a:focus {
-  border: 0px;
-}
-
-/* header start */
-.header-container {
-    height: 56px;
-    margin-bottom: 64px;
-}
-
-.index-link a:hover {
-    font-weight: normal;
-}
-
-.header-blurb {
-    font-size: 24px;
-    letter-spacing: 0.1rem;
-    vertical-align: middle;
-    font-weight: 400;
-    line-height: 56px;
-    float: left;
-    margin-left: 16px;
-}
-
-.navbar {
-    text-align: center;
-    font-size: 16px;
-    margin: 0px;
-    width: 360px;
-    float: right;
-    line-height: 56px;
-    margin-right: 16px;
-    letter-spacing: 0.1rem;
-}
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.navbar li {
-    display: inline-block;
-}
-
-.navbar a {
-    width: 80px;
-    display: block;
-}
-
-.itembox a {
-    color: #71797E;
-    text-decoration: none;
-}
-
-.itembox a:hover {
-    color: black;
-    text-decoration: underline;
-    text-underline-offset: 8px;
-}
-
-.itembox .current {
-    text-decoration: underline;
-    color: black;
-    text-underline-offset: 8px;
-}
-
-.itembox {
-    vertical-align: middle;
-}
-
-@media (max-width: 819px) {
-
-    .header-blurb {
-        text-align: center;
-        display: block;
-        float: none;
-        margin-left: none;
-    }
-
-    .navbar {
-        float: none;
-        margin-right: none;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar-list {
-        margin: auto;
-    }
-}
-
-@media (max-width: 470px) {
-
-    .header-blurb {
-        font-size: 16px;
-    }
-
-    .navbar {
-        font-size: 14px;
-        width: 320px;
-        margin: auto;
-    }
-
-    .navbar a {
-      width: 75px;
-    }
-}
-/* header end */
-
-/* footer start */
-.copyright p {
-    font-size: 10px;
-    text-align: center;
-    margin: 0px;
-    margin-bottom: 2px;
-    margin-top: 4px;
-  }
-  
-  .social-media-container {
-    text-align: center;
-    margin-top: 16px;
-    margin-bottom: 12px;
-    padding-bottom: 0px;
-  }
-  
-  .icon {
-    display: inline-block;
-    text-align: center;
-    margin-right: 3px;
-    padding: 0%;
-    font-size: 22px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-  }
-  
-footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 4.5rem;
-    background-color: gainsboro;
-  }
-
-.icon a {
-    color: #71797E;
-    text-decoration: none;
-}
-
-.icon a:hover{
-    color: black;
-    text-decoration: underline;
-    text-underline-offset: 8px;
-}
-
-.icon .current {
-    text-decoration: underline;
-    color: black;
-    text-underline-offset: 8px;
-}
-/* footer end */
-
-/* index page start */
-.index-grid {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.index-center-grid {
-    margin: auto;
-    width: 100%;
-    max-width: 1280px;
-    text-align: center;
-}
-
-.index-item {
-    display: inline-block;
-    width: 50%;
-    max-width: 562px;
-    padding-left: 14px;
-    padding-right: 14px;
-}
-
-.index-text {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-.index-image img {
-    max-height: 374.67px;
+  border: 0;
 }
 
 img {
-    width: 100%;
+  width: 100%;
+}
+
+
+/* ==================================================
+                  HEADER
+   ================================================== */
+
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  gap: 8px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header-blurb {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+.index-link {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  letter-spacing: 0.1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a {
+  display: block;
+  padding: 0 8px;
+  width: 75px;
+  text-align: center;
+}
+
+.itembox a {
+  color: #71797E;
+  text-decoration: none;
+}
+
+.itembox a:hover,
+.itembox .current {
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+/* === Desktop Enhancements === */
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    height: 56px;
+  }
+
+  .header-blurb {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .navbar {
+    justify-content: flex-end;
+    font-size: 16px;
+    width: auto;
+  }
+
+  .navbar a {
+    width: 80px;
+  }
+}
+
+/* ==================================================
+                  FOOTER
+   ================================================== */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4.5rem;
+  background-color: gainsboro;
+}
+
+.social-media-container {
+  text-align: center;
+  margin: 16px 0 12px;
+}
+
+.icon {
+  display: inline-block;
+  text-align: center;
+  margin-right: 3px;
+  font-size: 22px;
+}
+
+.icon a {
+  color: #71797E;
+  text-decoration: none;
+}
+
+.icon a:hover,
+.icon .current {
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.copyright p {
+  font-size: 10px;
+  text-align: center;
+  margin: 4px 0 2px;
+}
+
+/* ==================================================
+                  INDEX PAGE
+   ================================================== */
+
+.index-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem 0;
+}
+
+.index-center-grid {
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+  text-align: center;
+}
+
+.index-item {
+  display: inline-block;
+  width: 100%;
+  max-width: 562px;
+  padding: 0 14px;
+}
+
+.index-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.index-image img {
+  max-height: 374.67px;
 }
 
 .index-blurb {
-    text-align: center;
-    margin: auto;
-    margin-top: 52px;
-    margin-bottom: 52px;
-    font-size: 18px;
-    max-width: 80%;
+  text-align: center;
+  margin: 52px auto;
+  font-size: 18px;
+  max-width: 80%;
 }
 
-.index-blurb a {
-    color: black;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-.index-blurb a:hover {
-    color: black;
-    text-decoration: underline;
-}
-
+.index-blurb a,
 .index-item a {
-    color: black;
-    text-decoration: none;
-    font-weight: 400;
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
 }
 
-.index-item a:hover{
-    color: black;
-    text-decoration: underline;
-    text-underline-offset: 8px;
+.index-blurb a:hover,
+.index-item a:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
 
-/* index page end */
+@media (min-width: 768px) {
+  .index-item {
+    width: 50%;
+  }
+}
 
-/* media page start */
+/* ==================================================
+                  LISTEN PAGE
+   ================================================== */
+
 .media-header h3 {
-    font-size: 20px;
-    font-weight: 100;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.1rem;
-  }
-  
+  font-size: 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.video-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.boxofbox {
+  display: inline-block;
+  width: 100%;
+}
+
+.videobox {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.videobox iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.soundcloudlinks {
+  margin: 0 10%;
+}
+
+.for-more {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.for-more p {
+  font-size: 12px;
+  margin: 4px;
+}
+
+.for-more a {
+  color: #3366CC;
+  text-decoration: underline;
+}
+
+.listen-score-plug {
+  text-align:center;
+}
+
+.boxofbox p,
+.soundcloud-box p {
+  margin: 4px;
+}
+
+@media (min-width: 768px) {
   .video-container {
-    width: 80vw;
-    margin-left: 10vw;
+    width: 89vw;
   }
-  
+
   .boxofbox {
-    display: inline-block;
-    width: 100%;
+    width: 40vw;
+    margin: 2vw;
   }
-  
-  .videobox {
-    position: relative;
-    padding-bottom: 56.25%
-  }
-  
-  .videobox iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  
-  @media all and (min-width: 1020px) {
-    .media-header h3 {
-      font-size: 20px;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.1rem;
-    }
-    
-    .video-container {
-      margin-left: 6vw;
-      width: 89vw;
-    }
-    
-    .boxofbox {
-      display: inline-block;
-      width: 40vw;
-      margin: 2vw;
-    }
-    
-    .videobox {
-      position: relative;
-      padding-bottom: 56.25%
-    }
-    
-    .videobox iframe {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-  }
-  
+
   .soundcloudlinks {
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 60%;
+    margin: 0 auto;
   }
-  
-  
-  @media all and (min-width: 1020px) {
-    .soundcloudlinks {
-      width: 60%;
-      margin-left: 20%;
-      margin-right: 20%;
-    }
-  }
-  .for-more {
-    font-size: 20px;
-    text-align: center;
-    margin: 0px;
-  }
-  
+
   .for-more p {
     font-size: 18px;
-    text-align: center;
-    margin: 4px;
   }
-  
-  @media all and (max-width: 700px) {
-    .for-more p {
-      font-size: 12px;
-    }
-  }
-  
-  .for-more a {
-    color: #3366CC;
-    text-decoration: underline;
-  }
-  
-  .for-more a:hover {
-    color: #3366CC;
-    font-weight: normal;
-  }
+}
 
-  .boxofbox p {
-    margin: 4px;
-  }
+/* ==================================================
+                  WORKS PAGE
+   ================================================== */
 
-  .soundcloud-box p {
-    margin: 4px;
-  }
-  /* media page end */
-
-/* list of works page start */
 .works-page-container {
   margin: auto;
-  width: 100vw;
+  width: 100%;
   display: grid;
-  grid-template-columns: 33vw 60vw;
+  grid-template-columns: 1fr;
 }
 
 .work-body {
@@ -374,56 +343,33 @@ img {
   height: 18px;
 }
 
-.work-text {
-  margin-top: 5px;
-}
-
 .work-item {
   padding-right: 8px;
+  padding-bottom: 12px;
 }
 
-.work-text p {
-  margin: 0px;
-  line-height: 1.5em;
-}
-
-.title p {
-  font-size: 12px;
-  margin-bottom: 2px;
-  font-weight: bold;
-}
-
-
-.list-of-works {
-  margin-bottom: 120px;
-}
-
-.instrumentation p {
-  font-size: 12px;
-  margin-top: 0px;
-}
-
-.list-of-works a {
-  color: black;
-  text-decoration: none;
-}
-
-.list-of-works a:hover {
-  text-decoration: underline;
-}
-
-.list-of-works {
-  width: 100%;
-  margin-left: 8px;
-  margin-right: 8px;
-}
-
-.work-title h2 {
-  text-align: center;
+.work-text,
+.work-text h3,
+.title p,
+.instrumentation p,
+.text p,
+.list-of-works h2 {
+  margin: 0;
+  text-align: left;
 }
 
 .work-text h3 {
+  font-size: 20px;
   margin-bottom: 4px;
+}
+
+.title p,
+.instrumentation p {
+  font-size: 12px;
+}
+
+.title p {
+  font-weight: 600;
 }
 
 .score {
@@ -438,7 +384,6 @@ img {
 .score a:hover {
   color: black;
   font-weight: bolder;
-  text-decoration: underline;
 }
 
 .contact-for-performance a {
@@ -449,56 +394,51 @@ img {
   font-weight: normal;
 }
 
-.work-text h3 {
-  font-size: 20px;
+.list-of-works {
+  margin: 0 8px 120px;
+  width: 100%;
 }
 
-.text p {
-  text-align: center;
+.list-of-works a {
+  color: black;
+  text-decoration: none;
 }
 
-.list-of-works h2 {
-  font-size: 16px;
+.list-of-works a:hover {
+  text-decoration: underline;
 }
 
-@media all and (min-width: 1019px) {
+@media (min-width: 768px) {
   .works-page-container {
-    margin: auto;
     width: 960px;
-    display: grid;
     grid-template-columns: 320px 640px;
   }
 
-  .work-text h3 {
-    font-size: 20px;
+  .title p,
+  .instrumentation p {
+    font-size: 16px;
+  }
+
+  .list-of-works {
+    width: 320px;
   }
 
   .list-of-works h2 {
     font-size: 24px;
   }
 
-  .title p {
-    font-size: 16px;
-    margin-bottom: 2px;
-  }
-  
-  
-  .instrumentation p {
-    font-size: 16px;
-    margin-top: 0px;
-  }
-
-  .list-of-works {
-    width: 320px;
-  }  
-
   .works-spacer {
     height: 24px;
   }
 }
-/* list of works page end */
 
-/* contact form start */
+
+/* ==================================================
+                  CONTACT PAGE
+   ================================================== */
+
+
+
 .contact-form-spacer {
   height: 8vh;
 }
@@ -579,9 +519,13 @@ button {
 .send-button {
   text-align: right;
 }
-/*contact form end */
 
-/* thank you page start */
+
+/* ==================================================
+                  THANK YOU PAGE
+   ================================================== */
+
+
 .thank-you-spacer {
   height: 18vh;
 }
@@ -605,9 +549,13 @@ button {
 .jwpepper-plug {
   text-align: center;
 }
-/* thank you page end */
 
-/* about page start */
+
+/* ==================================================
+                  ABOUT PAGE
+   ================================================== */
+
+
 .about-header {
   font-weight: 100;
   font-size: 42px;
@@ -623,10 +571,6 @@ button {
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
-}
-
-.headshot-spacer {
-  height: 120px;
 }
 
 .biogrid {
@@ -655,6 +599,7 @@ button {
 }
 
 .headshotbox {
+  padding-top: 120px;
   width: 100%;
   box-sizing: border-box;
   margin: auto;
@@ -691,4 +636,3 @@ button {
     box-sizing: border-box;
   }
 }
-/* about page end */
