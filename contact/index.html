@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/js/loadHeadPartial.js" data-base="." defer></script>
     <title>Contact | Connor Simpson</title>
-    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="/stylesheet.css" />
   </head>
 
   <body>
@@ -18,17 +18,35 @@
             <div class="contact-form">
               <h1 class="contact-header">Contact</h1>
               <!-- INVESTIGATE NETLIFY FORM BACKEND -->
-              <form action="https://formsubmit.co/csimpsoncomposer@gmail.com" method="POST">
+              <form action="https://formspree.io/f/mayzgzza" method="POST">
                 <label for="name"></label>
-                <input type="text" id="name" name="user_name" placeholder="Name"/>
+                <input
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  placeholder="Name"
+                />
                 <label for="mail"></label>
-                <input type="email" id="mail" name="user_mail" placeholder="Email"/>
+                <input
+                  type="email"
+                  id="mail"
+                  name="user_mail"
+                  placeholder="Email"
+                />
                 <label for="msg"></label>
-                <textarea id="msg" name="user_message" placeholder="Message"></textarea>
+                <textarea
+                  id="msg"
+                  name="user_message"
+                  placeholder="Message"
+                ></textarea>
                 <div class="send-button">
                   <button type="submit">Send</button>
                 </div>
-                <input type="hidden" name="_next" value="https://www.connor-simpson-music.com/thank-you"/>
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://www.connor-simpson-music.com/thank-you"
+                />
                 <input
                   type="hidden"
                   name="_subject"
@@ -41,9 +59,12 @@
       </div>
       <div id="footer"></div>
     </div>
-
     <script src="/js/loadpartial.js"></script>
-    <script>loadPartial('footer', '/partials/footer.html');</script>
-    <script>loadPartial('header', '/partials/header.html');</script>
+    <script>
+      loadPartial("footer", "/partials/footer.html");
+    </script>
+    <script>
+      loadPartial("header", "/partials/header.html");
+    </script>
   </body>
 </html>

@@ -1,26 +1,14 @@
 /* Root theme variables */
 :root {
-  --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family: "Verdana", serif;
   --bg-color: #fdfdfd;
   --text-color: #1e1e1e;
+  --text-accent: #616161;
   --link-color: #2c6e91;
   --link-hover: #1b4a61;
   --accent-color: #ddd;
   --gap: 2rem;
   --transition: 0.3s ease;
-}
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #121212;
-    --text-color: #ddd;
-    --border-color: #444;
-    --input-bg: #1e1e1e;
-    --input-border: #555;
-    --button-bg: #888;
-    --button-hover-bg: #aaa;
-  }
 }
 
 /* Reset & base styles */
@@ -59,12 +47,12 @@ a:focus {
 
 .content-wrap {
   flex: 1;
-  padding: var(--gap);
+  padding: 0;
 }
 
 /* Grid section */
 .index-body {
-  max-width: 960px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -77,11 +65,13 @@ a:focus {
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
   justify-content: center;
+  margin: 1.5rem;
 }
 
 @media (max-width: 600px) {
   .index-grid {
-    grid-template-columns: 1fr; /* 1 column on small screens */
+    grid-template-columns: 1fr;
+    /* 1 column on small screens */
   }
 }
 
@@ -96,7 +86,9 @@ a:focus {
 .index-image img {
   max-width: 100%;
   border-radius: 8px;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .index-image a:focus img,
@@ -106,7 +98,8 @@ a:focus {
 }
 
 .index-text p {
-  margin-top: 0.75rem;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 500;
   font-size: 1.1rem;
 }
@@ -115,7 +108,7 @@ a:focus {
 .index-blurb {
   text-align: center;
   font-size: 1rem;
-  color: #444;
+  margin-bottom: var(--gap);
 }
 
 .index-blurb p {
@@ -129,56 +122,101 @@ a:focus {
 
 /* Header container */
 .header-container {
-  max-width: 960px;
-  margin: 0 auto 2rem auto;
-  padding-bottom: 0.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--accent-color);
-}
-
-/* Site title/link */
-.index-link {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--text-color);
-  text-decoration: none;
-  display: inline-flex;
   align-items: center;
-  transition: color var(--transition);
+  padding: 1rem 1.5rem;
+  position: relative;
+  z-index: 1000;
+  padding-bottom: 1rem;
+  margin-bottom: var(--gap);
 }
 
-.index-link:hover,
-.index-link:focus {
-  color: var(--link-hover);
-  outline: none;
-}
-
+/* Header text */
 .header-blurb {
-  letter-spacing: 0.05em;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  color: var(--text-color);
+  font-weight: bold;
+  white-space: nowrap;
+  margin: 0;
+  padding-right: 1rem;
 }
 
-/* Navbar */
+/* Hide checkbox toggle */
+.menu-toggle-checkbox {
+  display: none;
+}
+
+/* Hamburger icon */
+.menu-toggle-label {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.5rem;
+  z-index: 1100;
+}
+
+/* Desktop nav bar */
 .navbar {
   display: flex;
-  align-items: center;
 }
 
-/* Navbar list */
 .navbar-list {
-  list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Navbar items wrapper */
-.itembox {
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  transition: background-color var(--transition);
+.navbar-list li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 900px) {
+  .menu-toggle-label {
+    display: block;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.05);
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .menu-toggle-checkbox:checked~.navbar {
+    transform: translateX(0%);
+  }
+
+  /* Always keep layout horizontal at top */
+  .header-container {
+    flex-wrap: nowrap;
+  }
+
+  .index-link {
+    flex-shrink: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 /* Link styles inside navbar */
@@ -201,28 +239,7 @@ a:focus {
   border-radius: 4px;
 }
 
-/* Responsive: stack navbar on smaller screens */
-@media (max-width: 600px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-list {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .navbar-list a {
-    width: 100%;
-  }
-}
-
-
-
 footer {
-  margin-top: var(--gap);
   padding: 1.5rem 1rem 0.25rem;
   background-color: var(--accent-color);
   color: var(--text-color);
@@ -240,7 +257,7 @@ footer {
 }
 
 .social-media-container .icon a {
-  color: var(--link-color);
+  color: var(--text-accent);
   font-size: 1.25rem;
   transition: color var(--transition);
   display: inline-flex;
@@ -257,26 +274,23 @@ footer {
 copyright p {
   margin: 0;
   font-weight: 400;
-  color: #555;
   letter-spacing: 0.05em;
 }
 
-
-
 /* About page grid container */
 .biogrid {
-  display: grid;
-  grid-template-columns: 1fr 300px; /* Text takes remaining space, image fixed width */
+  display: flex;
+  flex-direction: row;
+  /* Text takes remaining space, image fixed width */
   gap: var(--gap);
   max-width: 960px;
   margin: 0 auto;
-  align-items: start;
   padding-bottom: var(--gap);
 }
 
 @media (max-width: 700px) {
   .biogrid {
-    grid-template-columns: 1fr; /* Stack on small screens */
+    flex-direction: column;
   }
 }
 
@@ -313,24 +327,26 @@ copyright p {
 .headshotbox {
   margin-top: 6rem;
   width: 300px;
-  height: 400px; /* fixed height for consistency */
+  height: 400px;
+  /* fixed height for consistency */
   border-radius: 8px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: var(--accent-color);
 }
 
 /* Headshot image styles */
 .headshot {
   width: 100%;
-  height: auto; /* keeps aspect ratio */
+  height: auto;
+  /* keeps aspect ratio */
   display: block;
-  object-fit: cover; /* crop if needed */
+  object-fit: cover;
+  /* crop if needed */
 }
-
 
 /* VIDEO SECTION GRID */
 .video-container {
@@ -338,6 +354,8 @@ copyright p {
   grid-template-columns: 1fr;
   gap: 3rem;
   margin-bottom: 4rem;
+  width: 75%;
+  margin: auto;
 }
 
 /* 2x2 Grid on large screens */
@@ -359,7 +377,8 @@ copyright p {
 .listen-video {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio */
 }
 
 .listen-video iframe {
@@ -394,7 +413,6 @@ copyright p {
   border-bottom: 1px solid var(--border);
   padding-bottom: 0.5rem;
 }
-
 
 /* Layout container */
 .works-page-container {
@@ -511,8 +529,9 @@ copyright p {
   background: #fff;
   border-radius: 8px;
   border: 1px solid #ddd;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #333;
 }
 
@@ -592,3 +611,48 @@ copyright p {
   }
 }
 
+/* Thank You Page Styles */
+
+.thank-you-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  color: var(--text-color);
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+.thank-you-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.thank-you-body {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Responsive tweak */
+@media (max-width: 480px) {
+  .thank-you-container {
+    margin: 2rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .thank-you-header {
+    font-size: 2rem;
+  }
+
+  .thank-you-body {
+    font-size: 1rem;
+  }
+}
