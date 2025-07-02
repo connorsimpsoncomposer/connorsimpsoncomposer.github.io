@@ -52,7 +52,7 @@ a:focus {
 
 /* Grid section */
 .index-body {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -137,7 +137,6 @@ a:focus {
   font-size: clamp(1rem, 4vw, 1.5rem);
   color: var(--text-color);
   font-weight: bold;
-  white-space: nowrap;
   margin: 0;
   padding-right: 1rem;
 }
@@ -152,8 +151,10 @@ a:focus {
   display: none;
   font-size: 2rem;
   cursor: pointer;
+  line-height: 1;
+  padding-bottom: 12px;
+  margin: 0;
   user-select: none;
-  padding: 0.5rem;
   z-index: 1100;
 }
 
@@ -173,13 +174,13 @@ a:focus {
 .navbar-list li a {
   text-decoration: none;
   font-weight: 500;
-  color: #000;
+  color: var(--text-color);
 }
 
 /* === Responsive Styles === */
 @media (max-width: 900px) {
   .menu-toggle-label {
-    display: block;
+    display: flex;
   }
 
   .navbar {
@@ -221,8 +222,8 @@ a:focus {
 
 /* Link styles inside navbar */
 .navbar-list a {
+  position: relative;
   font-weight: 600;
-  color: var(--link-color);
   text-decoration: none;
   letter-spacing: 0.05em;
   font-size: 1rem;
@@ -231,12 +232,29 @@ a:focus {
   transition: color var(--transition);
 }
 
+.navbar-list li {
+  display: inline-block;
+}
+
+.navbar-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navbar-list a:hover::after,
+.navbar-list a:focus::after {
+  width: 100%;
+}
+
 .navbar-list a:hover,
 .navbar-list a:focus {
-  color: var(--link-hover);
   outline: none;
-  background-color: var(--accent-color);
-  border-radius: 4px;
 }
 
 footer {
@@ -283,15 +301,9 @@ copyright p {
   flex-direction: row;
   /* Text takes remaining space, image fixed width */
   gap: var(--gap);
-  max-width: 960px;
+  max-width: 1280px;
   margin: 0 auto;
   padding-bottom: var(--gap);
-}
-
-@media (max-width: 700px) {
-  .biogrid {
-    flex-direction: column;
-  }
 }
 
 /* Wrappers for text and image */
@@ -303,7 +315,7 @@ copyright p {
 
 /* Text container styling */
 .biobox {
-  max-width: 620px;
+  padding: 1rem;
   font-size: 1rem;
   color: var(--text-color);
   line-height: 1.6;
@@ -348,6 +360,17 @@ copyright p {
   /* crop if needed */
 }
 
+@media (max-width: 700px) {
+  .biogrid {
+    flex-direction: column;
+  }
+
+  .headshotbox {
+    margin-top: 0;
+    margin-bottom: var(--gap);
+  }
+}
+
 /* VIDEO SECTION GRID */
 .video-container {
   display: grid;
@@ -360,6 +383,7 @@ copyright p {
 
 .audio-container {
   width: 75%;
+  max-width: 1024px;
   margin: auto;
 }
 
@@ -376,6 +400,14 @@ copyright p {
   align-items: stretch;
   justify-content: flex-start;
   gap: 0;
+}
+
+.audio-box {
+  margin-bottom: var(--gap);
+}
+
+.for-more {
+  text-align: center;
 }
 
 /* Responsive iframe wrapper to maintain 16:9 aspect ratio */
@@ -397,11 +429,11 @@ copyright p {
 }
 
 /* Documentary-style blurb */
-.listen-blurb {
+.listen-blurb p {
   font-style: italic;
   color: var(--subtle-text, #666);
+  margin-top: 2px;
   line-height: 1.6;
-  margin: 0 0.25rem;
   padding-top: 0;
   text-align: left;
   font-size: 0.95rem;
@@ -419,6 +451,7 @@ copyright p {
 }
 
 .listen-score-plug {
+  text-align: center;
   margin-bottom: var(--gap);
 }
 
@@ -442,7 +475,7 @@ copyright p {
   padding-right: 1rem;
   position: sticky;
   top: 2rem;
-  width: 16rem;
+  width: 20vw;
 }
 
 .list-of-works h2 {
@@ -488,7 +521,7 @@ copyright p {
   margin-bottom: 0.5rem;
 }
 
-.work-body h3{
+.work-body h3 {
   margin-bottom: 0;
 }
 
@@ -526,7 +559,6 @@ copyright p {
 }
 
 .contact
-
 /* Responsive */
 @media (max-width: 768px) {
   .works-page-container {
