@@ -338,8 +338,8 @@ copyright p {
 /* Headshot container to fix height and crop overflow */
 .headshotbox {
   margin-top: 6rem;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
   /* fixed height for consistency */
   border-radius: 8px;
   overflow: hidden;
