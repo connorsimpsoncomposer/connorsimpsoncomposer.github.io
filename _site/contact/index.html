@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <script src="https://kit.fontawesome.com/ac42e3d270.js" crossorigin="anonymous"></script>
+    <link
+      href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII="
+      rel="icon" type="image/x-icon"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Contact | Connor Simpson</title>
+  </head>
+
+  <body class="">
+    <div class="body-container">
+      <div class="content-wrap">
+        <header>
+  <div class="header-container">
+    <a href="/" class="index-link">
+      <span class="header-blurb">CONNOR SIMPSON | COMPOSER</span>
+    </a>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+    <label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle menu">
+      ☰
+    </label>
+
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li><a href="/about/">ABOUT</a></li>
+        <li><a href="/listen/">LISTEN</a></li>
+        <li><a href="/works/">WORKS</a></li>
+        <li><a href="/contact/">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+        <section>
+  <div class="contact-form-container">
+    <div class="contact-form">
+      <h1 class="contact-header">Contact</h1>
+      <!-- INVESTIGATE NETLIFY FORM BACKEND -->
+      <form action="https://formspree.io/f/mayzgzza" method="POST">
+        <label for="name"></label>
+        <input type="text" id="name" name="user_name" placeholder="Name" />
+        <label for="mail"></label>
+        <input type="email" id="mail" name="user_mail" placeholder="Email" />
+        <label for="msg"></label>
+        <textarea id="msg" name="user_message" placeholder="Message"></textarea>
+        <div class="send-button">
+          <button type="submit">Send</button>
+        </div>
+        <input type="hidden" name="_next" value="https://www.connor-simpson-music.com/thank-you" />
+        <input type="hidden" name="_subject" value="New submission from contact form" />
+      </form>
+    </div>
+  </div>
+</section>
+
+      </div>
+      <footer>
+  <div class="social-media-container">
+    <div class="icon">
+      <a href="https://www.facebook.com/connor.simpson.129794"><i class="fa-brands fa-facebook-f"></i></a>
+    </div>
+    <div class="icon">
+      <a href="https://www.instagram.com/connorsimpsoncomposer/"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <div class="icon">
+      <a
+        href="https://soundcloud.com/connor-simpson-326466060?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"><i
+          class="fa-brands fa-soundcloud"></i></a>
+    </div>
+    <div class="icon">
+      <a href="https://www.youtube.com/@connorsimpson5435/featured"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright @ 2022 Connor Simpson</p>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

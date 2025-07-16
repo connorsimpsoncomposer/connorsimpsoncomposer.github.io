@@ -1,0 +1,27 @@
+---
+layout: default
+title: Contact | Connor Simpson
+permalink: /contact/
+---
+
+<section>
+  <div class="contact-form-container">
+    <div class="contact-form">
+      <h1 class="contact-header">Contact</h1>
+      <!-- INVESTIGATE NETLIFY FORM BACKEND -->
+      <form action="https://formspree.io/f/mayzgzza" method="POST">
+        <label for="name"></label>
+        <input type="text" id="name" name="user_name" placeholder="Name" />
+        <label for="mail"></label>
+        <input type="email" id="mail" name="user_mail" placeholder="Email" />
+        <label for="msg"></label>
+        <textarea id="msg" name="user_message" placeholder="Message"></textarea>
+        <div class="send-button">
+          <button type="submit">Send</button>
+        </div>
+        <input type="hidden" name="_next" value="https://www.connor-simpson-music.com/thank-you" />
+        <input type="hidden" name="_subject" value="New submission from contact form" />
+      </form>
+    </div>
+  </div>
+</section>

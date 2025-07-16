@@ -1,102 +1,72 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheet.css" />
-    <script
-      src="https://kit.fontawesome.com/ac42e3d270.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII="
-      rel="icon"
-      type="image/x-icon"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Home | Connor Simpson</title>
-  </head>
+---
+layout: default
+title: Home | Connor Simpson
+body_class: index-page
+---
 
-  <body>
-    <div class="body-container">
-      <div class="content-wrap">
-        <div id="header"></div>
-        <section class="index-body">
-          <div class="index-grid-container">
-            <div class="index-grid">
-              <div class="index-item">
-                <div class="index-image">
-                  <a href="listen/" class="listen">
-                    <img class="listen" src="images/listen-image.jpg" />
-                  </a>
-                </div>
-                <div class="index-text">
-                  <a href="listen/" class="listen">
-                    <p>Listen</p>
-                  </a>
-                </div>
-              </div>
-              <div class="index-item">
-                <div class="index-image">
-                  <a href="works/" class="works">
-                    <img class="works" src="images/works-image.jpg" />
-                  </a>
-                </div>
-                <div class="index-text">
-                  <a href="works/" class="works">
-                    <p>Works</p>
-                  </a>
-                </div>
-              </div>
-              <div class="index-item">
-                <div class="index-image">
-                  <a href="about/" class="about">
-                    <img class="about" src="images/about-image.jpg" />
-                  </a>
-                </div>
-                <div class="index-text">
-                  <a href="about/" class="about">
-                    <p>About</p>
-                  </a>
-                </div>
-              </div>
-              <div class="index-item">
-                <div class="index-image">
-                  <a href="contact/" class="contact">
-                    <img class="contact" src="images/contact-image.jpg" />
-                  </a>
-                </div>
-                <div class="index-text">
-                  <a href="contact/" class="contact">
-                    <p>Contact</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="index-blurb">
-            <p>Connor Simpson is a composer based in Rochester NY.</p>
-            <p>
-              <a href="mailto:connorsimpsoncomposer@gmail.com" class="email">
-                connorsimpsoncomposer@gmail.com
-              </a>
-            </p>
-          </div>
-        </section>
+<section class="index-body">
+  <div class="index-grid-container">
+    <div class="index-grid">
+      <div class="index-item">
+        <div class="index-image">
+          <a href="listen/" class="listen">
+            <img class="listen" src="assets/images/listen-image.jpg" />
+          </a>
+        </div>
+        <div class="index-text">
+          <a href="listen/" class="listen">
+            <p>Listen</p>
+          </a>
+        </div>
       </div>
-      <div id="footer"></div>
-    </div>
 
-    <script src="/js/loadpartial.js"></script>
-    <script>
-      loadPartial("footer", "/partials/footer.html");
-    </script>
-    <script>
-      loadPartial("header", "/partials/header.html");
-    </script>
-  </body>
-</html>
+      <div class="index-item">
+        <div class="index-image">
+          <a href="works/" class="works">
+            <img class="works" src="assets/images/works-image.jpg" />
+          </a>
+        </div>
+        <div class="index-text">
+          <a href="works/" class="works">
+            <p>Works</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="index-item">
+        <div class="index-image">
+          <a href="about/" class="about">
+            <img class="about" src="assets/images/about-image.jpg" />
+          </a>
+        </div>
+        <div class="index-text">
+          <a href="about/" class="about">
+            <p>About</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="index-item">
+        <div class="index-image">
+          <a href="contact/" class="contact">
+            <img class="contact" src="assets/images/contact-image.jpg" />
+          </a>
+        </div>
+        <div class="index-text">
+          <a href="contact/" class="contact">
+            <p>Contact</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="index-blurb">
+    <p>Connor Simpson is a composer based in Rochester NY.</p>
+    <p>
+      <a href="mailto:connorsimpsoncomposer@gmail.com" class="email">
+        connorsimpsoncomposer@gmail.com
+      </a>
+    </p>
+  </div>
+</section>

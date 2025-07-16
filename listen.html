@@ -1,0 +1,88 @@
+---
+layout: default
+title: Listen | Connor Simpson
+permalink: /listen/
+---
+
+<section>
+  <div class="media-header">
+    <h3>Video</h3>
+  </div>
+  <div class="video-container">
+    {% for video in site.data.listen.videos %}
+    <div class="boxofbox">
+      <div class="videobox listen-video">
+        <iframe
+          src="{{ video.embed_url }}"
+          title="{{ video.title }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="listen-blurb">
+        <p>
+          <em>{{ video.piece_title }}</em> ({{ video.year }}) {{ video.instrumentation }}<br />
+          {{ video.performers }}<br />
+          {% if video.venue %}{{ video.venue }}{% endif %}
+          {% if video.venue and video.location %} | {% endif %}
+          {% if video.location %}{{ video.location }}{% endif %}
+          {% if (video.venue or video.location) and video.performance_year %} | {% endif %}
+          {% if video.performance_year %}{{ video.performance_year }}{% endif %}
+        </p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="audio-container">
+    <div class="media-header">
+      <h3>Audio</h3>
+    </div>
+    {% for track in site.data.listen.audio %}
+    <div class="audio-box">
+      <div class="soundcloud-box listen-soundcloud-box">
+        <iframe
+          width="100%"
+          height="100vh"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="{{ track.embed_url }}"
+        ></iframe>
+      </div>
+      <div class="listen-blurb">
+        <p>
+          <em>{{ track.piece_title }}</em> ({{ track.year }}) {{ track.instrumentation }}<br />
+          {% if track.performers %}{{ track.performers }}<br />{% endif %}
+          {% if track.location %}{{ track.location }}{% endif %}
+          {% if track.location and track.performance_year %} | {% endif %}
+          {% if track.performance_year %}{{ track.performance_year }}{% endif %}
+        </p>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="for-more">
+      <p>Find more recordings on my SoundCloud or YouTube:</p>
+      <p>
+        <a href="https://on.soundcloud.com/C1Wra">https://on.soundcloud.com/C1Wra</a>
+      </p>
+      <p>
+        <a href="https://www.youtube.com/channel/UC405Ank2WNNjmoKRCFzxtAA">
+          https://www.youtube.com/channel/UC405Ank2WNNjmoKRCFzxtAA
+        </a>
+      </p>
+    </div>
+
+    <div class="listen-score-plug">
+      <p>
+        Select scores available for purchase on
+        <a href="https://www.jwpepper.com/sheet-music/search.jsp?sort=newDate&obsoleteFlag=false&brandNames=Connor%20Simpson">
+          JW Pepper
+        </a>
+      </p>
+    </div>
+  </div>
+</section>

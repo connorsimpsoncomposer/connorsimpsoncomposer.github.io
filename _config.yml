@@ -1,0 +1,21 @@
+title: Connor Simpson
+baseurl: ""
+url: "https://www.connorsimpsonmusic.com"
+
+collections:
+  works:
+    output: true
+    permalink: /works/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "works"
+    values:
+      layout: work
+
+sass:
+  style: compressed
+
+include:
+  - _works
