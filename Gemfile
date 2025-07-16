@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.4.4"
-
-gem "jekyll", "~> 4.3"
-gem "bundler", "~> 2.4" 
+gem "jekyll", "~> 4.4.1"
+gem "webrick", "~> 1.8"
+gem "csv"
+gem "logger"

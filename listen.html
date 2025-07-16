@@ -28,7 +28,11 @@ permalink: /listen/
           {% if video.venue %}{{ video.venue }}{% endif %}
           {% if video.venue and video.location %} | {% endif %}
           {% if video.location %}{{ video.location }}{% endif %}
-          {% if (video.venue or video.location) and video.performance_year %} | {% endif %}
+          
+          {% if (video.venue or video.location) %}
+            {% if video.performance_year %} | {% endif %}
+          {% endif %}
+          
           {% if video.performance_year %}{{ video.performance_year }}{% endif %}
         </p>
       </div>

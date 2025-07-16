@@ -10,5 +10,4 @@ program_notes: >
   <em>A short cry</em> moves through restrained gestures and fading echoes, tracing fragments of half-remembered expression.
   Murmurs, brief intensities, and fragile lyricism drift without setting. A residue remains, of memory and loss.
   Sounds surface tentatively, like memories half-surfaced or voices softened by distance. What unfolds is quiet and porous — shaped not by structure, but by the erosion of presence.
-permalink: /works/a-short-cry/
 ---
