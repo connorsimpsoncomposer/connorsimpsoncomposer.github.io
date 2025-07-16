@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +11,7 @@
     href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII="
     rel="icon" type="image/x-icon" />
   <title>Exile | Connor Simpson</title>
-  <link rel="stylesheet" href="/stylesheet.css">
+  <link rel="stylesheet" href="/stylesheet.css" />
 </head>
 
 <body>
@@ -21,58 +22,63 @@
         <div class="works-page-container">
           <div id="listofworks"></div>
           <div class="work-body">
-            <div class="work-title">
-              <h2>Exile</h2>
+            <div class="work-header">
+              <h2 class="work-title">Exile</h2>
+              <a href="/works" class="back-to-works">← Back to Works</a>
             </div>
             <div class="work-text">
               <div class="work-dedication">
-                <p><em>Exile</em> was composed in Spring 2021 and is set to be premiered April, 2023.</p>
+                <p>
+                  <em>Exile</em> was composed in Spring 2021 and is set to be
+                  premiered April, 2023.
+                </p>
               </div>
               <div class="program-notes">
-                <h3">Program Notes:</h3>
-                  <p>
-                    <em>Exile</em> seeks to recreate a musical moment of sadness and depression from the
-                    loss of a loved one. <em>Exile</em> does not represent anger, denial or the stages of grief, only
-                    depression. The text resonated with me deeply with my own processing of grief.
-                  </p>
+                <h3>Program Notes:</h3>
+                <p>
+                  <em>Exile</em> seeks to recreate a musical moment of sadness
+                  and depression from the loss of a loved one.
+                  <em>Exile</em> does not represent anger, denial or the
+                  stages of grief, only depression. The text resonated with me
+                  deeply with my own processing of grief.
+                </p>
               </div>
               <div class="lyrics">
                 <h3>Exile</h3>
                 <p class="author"><em>by Ernest Christopher Dowson</em></p>
-                <br>
 
                 <p class="stanza">
-                  By the sad waters of separation<br>
-                  Where we have wandered by divers ways,<br>
-                  I have but the shadow and imitation<br>
+                  By the sad waters of separation<br />
+                  Where we have wandered by divers ways,<br />
+                  I have but the shadow and imitation<br />
                   Of the old memorial days.
                 </p>
 
                 <p class="stanza">
-                  In music I have no consolation,<br>
-                  No roses are pale enough for me;<br>
-                  The sound of the waters of separation<br>
+                  In music I have no consolation,<br />
+                  No roses are pale enough for me;<br />
+                  The sound of the waters of separation<br />
                   Surpasseth roses and melody.
                 </p>
 
                 <p class="stanza">
-                  By the sad waters of separation<br>
-                  Dimly I hear from an hidden place<br>
-                  The sigh of mine ancient adoration:<br>
+                  By the sad waters of separation<br />
+                  Dimly I hear from an hidden place<br />
+                  The sigh of mine ancient adoration:<br />
                   Hardly can I remember your face.
                 </p>
 
                 <p class="stanza">
-                  If you be dead, no proclamation<br>
-                  Sprang to me over the waste, gray sea:<br>
-                  Living, the waters of separation<br>
+                  If you be dead, no proclamation<br />
+                  Sprang to me over the waste, gray sea:<br />
+                  Living, the waters of separation<br />
                   Sever for ever your soul from me.
                 </p>
 
                 <p class="stanza">
-                  No man knoweth our desolation;<br>
-                  Memory pales of the old delight<br>
-                  While the sad waters of separation<br>
+                  No man knoweth our desolation;<br />
+                  Memory pales of the old delight<br />
+                  While the sad waters of separation<br />
                   Bear us on to the ultimate night.
                 </p>
               </div>
@@ -80,8 +86,9 @@
                 <a href="/scores/exile.pdf">View Score</a>
               </div>
               <div class="contact-for-performance">
-                <p>If interested in performing this work, contact me at <a
-                    href="mailto:csimpsoncomposer@gmail.com">csimpsoncomposer@gmail.com.</a>
+                <p>
+                  If interested in performing this work, contact me at
+                  <a href="mailto:csimpsoncomposer@gmail.com">csimpsoncomposer@gmail.com.</a>
                 </p>
               </div>
             </div>
@@ -93,9 +100,15 @@
   </div>
 
   <script src="/js/loadpartial.js"></script>
-  <script>loadPartial('footer', '/partials/footer.html');</script>
-  <script>loadPartial('header', '/partials/header.html');</script>
-  <script>loadPartial('listofworks', '/partials/listofworks.html');</script>
+  <script>
+    loadPartial("footer", "/partials/footer.html");
+  </script>
+  <script>
+    loadPartial("header", "/partials/header.html");
+  </script>
+  <script>
+    loadPartial("listofworks", "/partials/listofworks.html");
+  </script>
 </body>
 
 </html>
