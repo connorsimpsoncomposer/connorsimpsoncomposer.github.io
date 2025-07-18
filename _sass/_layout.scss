@@ -1,0 +1,113 @@
+/* Layout Structure */
+
+// Full-page flex column layout
+.body-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// Wraps main content between header and footer
+.content-wrap {
+  flex: 1;
+  padding: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-md);
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Spacing */
+.mb-md {
+  margin-bottom: var(--gap-md);
+}
+
+.mt-md {
+  margin-top: var(--gap-md);
+}
+
+.mx-md {
+  margin-left: var(--gap-md);
+  margin-right: var(--gap-md);
+}
+
+/* Typography */
+.text-center {
+  text-align: center;
+}
+
+.text-md {
+  font-size: var(--fs-md);
+}
+
+.text-base {
+  font-size: var(--fs-base);
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+/* Image Hover */
+.hover-float-shadow {
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/* Image Style */
+.img-rounded {
+  max-width: 100%;
+  border-radius: var(--radius);
+}
+
+/* Underline Animation (already done) */
+.underline-animate {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}

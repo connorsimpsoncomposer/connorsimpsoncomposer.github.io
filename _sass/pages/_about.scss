@@ -1,0 +1,67 @@
+.biogrid {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--gap);
+}
+
+.biobox-wrapper,
+.headshotbox-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.biobox {
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.about-header {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.biobox p {
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.headshotbox-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; // <- prevent vertical stretch
+}
+
+.headshotbox {
+  width: 400px;
+  aspect-ratio: 3/4;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: var(--gap-sm);
+  margin-top: $gap-xxl;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.headshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .biogrid {
+    flex-direction: column;
+  }
+
+  .headshotbox {
+    margin-top: 0;
+    margin-bottom: var(--gap);
+  }
+}

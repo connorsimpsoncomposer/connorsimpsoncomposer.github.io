@@ -2,7 +2,7 @@
 layout: work
 title: As it were
 youtube_id: 3IZBwXRu_hs?si=c9q6sSqrg9Yb-nRG
-description: >
+blurb: >
   Premiered 2023 by the Eastman Graduate Composers' Sinfonietta, conducted by Serena Reuten.
 program_notes: >
   <em>As it were</em> explores a language of rhythmic and melodic combinations. The work exists as a canon,

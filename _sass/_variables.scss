@@ -1,0 +1,177 @@
+/* === Typography === */
+$font-family-base: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
+$font-family-heading: $font-family-base;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+
+/* === Spacing Scale === */
+$space-xxs: 0.25rem;
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 3rem;
+$space-xxl: 4rem;
+
+$gap-xxs: 0.25rem;
+$gap-xs: 0.5rem;
+$gap-sm: 1rem;
+$gap: 1.5rem;
+$gap-lg: 2rem;
+$gap-xl: 3rem;
+$gap-xxl: 4rem;
+
+/* === Font Sizes === */
+$fs-xs: 0.85rem;
+$fs-sm: 0.95rem;
+$fs-base: 1rem;
+$fs-md: 1.125rem;
+$fs-lg: 1.3rem;
+$fs-xl: 1.5rem;
+$fs-xxl: 2rem;
+$fs-xxxl: 2.5rem;
+$fs-display: 3.5rem;
+
+/* === Transitions === */
+$transition-fast: 0.15s ease-in-out;
+$transition: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+/* === Border Radius === */
+$radius-xs: 4px;
+$radius-sm: 6px;
+$radius: 8px;
+$radius-lg: 12px;
+$radius-pill: 999px;
+
+/* === Shadows === */
+$shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.04);
+$shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+/* === Color Palette === */
+/* Neutral */
+$gray-100: #f8f8f8;
+$gray-200: #e0e0e0;
+$gray-300: #cccccc;
+$gray-400: #aaaaaa;
+$gray-500: #888888;
+$gray-600: #555555;
+$gray-700: #333333;
+$gray-800: #222222;
+
+/* Primary Accent */
+$primary: #a0a0a0;
+$primary-hover: #9e9e9e;
+$primary-muted: #bbbbbb;
+
+/* Semantic Roles */
+$color-bg: $gray-300;
+$color-surface: $gray-700;
+$color-surface-alt: $gray-400;
+$color-bg-mid: $gray-600;
+$color-bg-dim: $gray-500;
+
+$color-text: $gray-700;
+$color-text-heading: $gray-800;
+$color-text-accent: $gray-600;
+$color-text-muted: $gray-600;
+
+$color-border: $gray-400;
+$color-link: $gray-600;
+$color-link-hover: $gray-700;
+$color-accent: $primary;
+$color-accent-hover: $primary-hover;
+$color-accent-muted: $primary-muted;
+
+/* Feedback States */
+$color-success: #4caf50;
+$color-warning: #ff9800;
+$color-error: #f44336;
+$color-info: #2196f3;
+
+/* === Dark Theme Map === */
+$dark-theme: (
+  color-bg: $gray-700,
+  color-surface: $gray-200,
+  color-surface-alt: $gray-500,
+  color-bg-mid: $gray-700,
+  color-bg-dim: $gray-800,
+  color-text: $gray-200,
+  color-text-heading: $gray-100,
+  color-text-accent: $gray-300,
+  color-text-muted: $gray-400,
+  color-border: $gray-500,
+  color-link: $gray-200,
+  color-link-hover: $gray-100,
+  color-accent: $gray-600,
+  color-accent-hover: $primary-hover,
+  color-accent-muted: $gray-700,
+);
+
+/* === Root Export for CSS Variables === */
+:root {
+  --font-family: #{$font-family-base};
+  --transition: #{$transition};
+  --radius: #{$radius};
+
+  --bg-color: #{$color-bg};
+  --surface: #{$color-surface};
+  --surface-alt: #{$color-surface-alt};
+  --bg-mid: #{$color-bg-mid};
+  --bg-dim: #{$color-bg-dim};
+
+  --text-color: #{$color-text};
+  --text-heading: #{$color-text-heading};
+  --text-accent: #{$color-text-accent};
+  --text-muted: #{$color-text-muted};
+
+  --border: #{$color-border};
+
+  --color-link: #{$color-link};
+  --link-hover: #{$color-link-hover};
+
+  --accent-color: #{$color-accent};
+  --accent-hover: #{$color-accent-hover};
+  --accent-muted: #{$color-accent-muted};
+
+  --gap-xxs: #{$space-xxs};
+  --gap-xs: #{$space-xs};
+  --gap-sm: #{$space-sm};
+  --gap-md: #{$space-md};
+  --gap-lg: #{$space-lg};
+  --gap-xl: #{$space-xl};
+  --gap-xxl: #{$space-xxl};
+  --gap: #{$space-md};
+
+  --success: #{$color-success};
+  --warning: #{$color-warning};
+  --error: #{$color-error};
+  --info: #{$color-info};
+}
+
+/* === Dark Theme Override === */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #{map-get($dark-theme, color-bg)};
+    --surface: #{map-get($dark-theme, color-surface)};
+    --surface-alt: #{map-get($dark-theme, color-surface-alt)};
+    --bg-mid: #{map-get($dark-theme, color-bg-mid)};
+    --bg-dim: #{map-get($dark-theme, color-bg-dim)};
+
+    --text-color: #{map-get($dark-theme, color-text)};
+    --text-heading: #{map-get($dark-theme, color-text-heading)};
+    --text-accent: #{map-get($dark-theme, color-text-accent)};
+    --text-muted: #{map-get($dark-theme, color-text-muted)};
+
+    --border: #{map-get($dark-theme, color-border)};
+
+    --color-link: #{map-get($dark-theme, color-link)};
+    --link-hover: #{map-get($dark-theme, color-link-hover)};
+
+    --accent-color: #{map-get($dark-theme, color-accent)};
+    --accent-hover: #{map-get($dark-theme, color-accent-hover)};
+    --accent-muted: #{map-get($dark-theme, color-accent-muted)};
+  }
+}

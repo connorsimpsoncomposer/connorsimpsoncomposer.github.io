@@ -1,0 +1,35 @@
+.index-content {
+  max-width: 980px;
+  padding-block: 2rem;
+
+  .index-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    justify-items: center;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .index-item {
+    padding: var(--gap-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    p {
+      margin-top: $gap-xs;
+      margin-bottom: 0;
+      font-weight: bold;
+      font-size: $fs-md;
+    }
+  }
+
+  .index-intro {
+    max-width: 600px;
+    margin-inline: auto;
+    text-align: center;
+  }
+}

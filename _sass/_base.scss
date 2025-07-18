@@ -1,0 +1,163 @@
+/* _base.scss */
+
+/* === RESET & GLOBAL === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $fs-base;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === TYPOGRAPHY === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: $gap-sm;
+}
+
+h1 {
+  font-size: $fs-xxl;
+}
+
+h2 {
+  font-size: $fs-xl;
+}
+
+h3 {
+  font-size: $fs-lg;
+}
+
+h4 {
+  font-size: $fs-md;
+}
+
+h5 {
+  font-size: $fs-base;
+}
+
+h6 {
+  font-size: $fs-sm;
+}
+
+p {
+  margin-bottom: $gap-sm;
+  font-size: $fs-base;
+}
+
+/* === LINKS === */
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  transition: color $transition;
+
+  &:hover,
+  &:focus {
+    color: var(--link-hover);
+    outline: none;
+  }
+}
+
+/* === IMAGES === */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* === BUTTONS & FORM ELEMENTS === */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+}
+
+input,
+textarea {
+  border: 1px solid $color-text-accent;
+  background-color: $color-bg;
+  border-radius: $radius;
+  padding: $gap-xs $gap-sm;
+  transition: border-color $transition;
+
+  &:focus {
+    border-color: $color-link-hover;
+    outline: none;
+  }
+}
+
+button {
+  cursor: pointer;
+  border-radius: $radius;
+  padding: $gap-xs $gap-sm;
+  background-color: $color-link;
+  color: $color-bg;
+  transition: background-color $transition;
+
+  &:hover,
+  &:focus {
+    background-color: $color-link-hover;
+  }
+}
+
+/* === LISTS === */
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+li + li {
+  margin-top: 0.5rem;
+}
+
+/* === TABLES === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: $gap-xs;
+  text-align: left;
+  border-bottom: 1px solid $color-text-accent;
+}
+
+/* === SELECTION === */
+::selection {
+  background-color: $color-link;
+  color: $color-bg;
+}

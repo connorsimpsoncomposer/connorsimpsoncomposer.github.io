@@ -1,0 +1,59 @@
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+.hover-underline:hover,
+.hover-underline:focus {
+  text-decoration: underline !important;
+}
+
+.underline-animate {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  transition: color var(--transition);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+.hover-float-shadow {
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-md);
+  }
+}

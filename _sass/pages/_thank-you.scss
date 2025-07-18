@@ -1,0 +1,45 @@
+/* Thank You Page Styles */
+
+.thank-you-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  color: var(--text-color);
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+.thank-you-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.thank-you-body {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Responsive tweak */
+@media (max-width: 480px) {
+  .thank-you-container {
+    margin: 2rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .thank-you-header {
+    font-size: 2rem;
+  }
+
+  .thank-you-body {
+    font-size: 1rem;
+  }
+}

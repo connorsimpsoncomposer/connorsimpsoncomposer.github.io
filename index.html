@@ -4,67 +4,25 @@ title: Home | Connor Simpson
 body_class: index-page
 ---
 
-<section class="index-body">
-  <div class="index-grid-container">
-    <div class="index-grid">
+<section class="container index-content">
+  <div class="index-grid">
+    {% assign items = "listen,works,about,contact" | split: "," %}
+    {% for item in items %}
       <div class="index-item">
-        <div class="index-image">
-          <a href="listen/" class="listen">
-            <img class="listen" src="assets/images/listen-image.jpg" />
-          </a>
-        </div>
-        <div class="index-text">
-          <a href="listen/" class="listen">
-            <p>Listen</p>
-          </a>
-        </div>
+        <a href="{{ item }}/" class="hover-float-shadow">
+          <img src="assets/images/{{ item }}-image.jpg" alt="{{ item }}" class="img-rounded hover-float-shadow" />
+        </a>
+        <a href="{{ item }}/" class="underline-animate">
+          <p class="mb-1">{{ item | capitalize }}</p>
+        </a>
       </div>
-
-      <div class="index-item">
-        <div class="index-image">
-          <a href="works/" class="works">
-            <img class="works" src="assets/images/works-image.jpg" />
-          </a>
-        </div>
-        <div class="index-text">
-          <a href="works/" class="works">
-            <p>Works</p>
-          </a>
-        </div>
-      </div>
-
-      <div class="index-item">
-        <div class="index-image">
-          <a href="about/" class="about">
-            <img class="about" src="assets/images/about-image.jpg" />
-          </a>
-        </div>
-        <div class="index-text">
-          <a href="about/" class="about">
-            <p>About</p>
-          </a>
-        </div>
-      </div>
-
-      <div class="index-item">
-        <div class="index-image">
-          <a href="contact/" class="contact">
-            <img class="contact" src="assets/images/contact-image.jpg" />
-          </a>
-        </div>
-        <div class="index-text">
-          <a href="contact/" class="contact">
-            <p>Contact</p>
-          </a>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 
-  <div class="index-blurb">
-    <p>Connor Simpson is a composer based in Rochester NY.</p>
+  <div class="index-intro">
+    <p class="mb-sm">Connor Simpson is a composer based in Rochester NY.</p>
     <p>
-      <a href="mailto:connorsimpsoncomposer@gmail.com" class="email">
+      <a href="mailto:connorsimpsoncomposer@gmail.com" class="text-bold break-word">
         connorsimpsoncomposer@gmail.com
       </a>
     </p>
