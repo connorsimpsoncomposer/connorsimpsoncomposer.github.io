@@ -1,6 +1,12 @@
 /* VIDEO SECTION GRID */
 .listen-page-container {
+  margin: auto;
   margin-bottom: var(--gap-xl);
+  width: 75%;
+
+  @media (max-width: 900px) {
+    width: 90%;
+  }
 }
 
 .video-container {
@@ -8,13 +14,10 @@
   grid-template-columns: 1fr;
   gap: 3rem;
   margin-bottom: 4rem;
-  width: 75%;
   margin: auto;
 }
 
 .audio-container {
-  width: 75%;
-  max-width: 1024px;
   margin: auto;
 }
 
@@ -44,7 +47,6 @@
 /* Responsive iframe wrapper to maintain 16:9 aspect ratio */
 .listen-video {
   position: relative;
-  width: 100%;
   padding-top: 56.25%;
   /* 16:9 Aspect Ratio */
 }
