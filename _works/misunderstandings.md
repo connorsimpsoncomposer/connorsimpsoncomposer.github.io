@@ -1,6 +1,9 @@
 ---
 layout: work
 title: Misunderstandings
+year: 2021
+instrumentation: Solo Multi-percussion
+instruments: Percussion, Solo Multi-percussion
 premiere: Premiered by Bella Scotti 2019, in Esber Recital Hall.
 program_notes: |
   <em>Misunderstandings</em> represents several rhythms being folded upon themselves with respect to time.

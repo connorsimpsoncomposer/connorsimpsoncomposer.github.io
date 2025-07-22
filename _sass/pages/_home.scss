@@ -1,5 +1,5 @@
 .index-content {
-  max-width: 980px;
+  max-width: 880px;
   padding-block: 2rem;
 
   .index-grid {
@@ -13,7 +13,7 @@
   }
 
   .index-item {
-    padding: var(--gap-md);
+    padding: var(--gap-sm);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,6 +28,7 @@
   }
 
   .index-intro {
+    margin: var(--gap-sm);
     max-width: 600px;
     margin-inline: auto;
     text-align: center;

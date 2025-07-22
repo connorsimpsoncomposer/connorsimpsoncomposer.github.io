@@ -1,6 +1,13 @@
+.contact-form-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 75vh;
+}
+
 .contact-form-container {
-  max-width: 480px;
-  margin: 8rem auto;
+  max-width: 520px;
+  margin: 0 auto;
   padding: 2rem 1.5rem;
   background: var(--accent-color);
   border-radius: 8px;

@@ -1,6 +1,9 @@
 ---
 layout: work
 title: Something which wanders and falls
+year: 2022
+instrumentation: Hypercube Ensemble
+instruments: Accordion, Piano, Saxophone, Electric Guitar, Chamber Ensemble
 youtube_id: dPyRrVelyOs
 blurb: Premiered 2022 by <a href="https://www.hypercubemusic.org/">Hypercube Ensemble</a> as a part of the 2022 CubeLab workshop.
 performers:

@@ -1,7 +1,9 @@
 ---
 layout: work
 title: Insufficient Title
-youtube_id:
+year: 2019
+instrumentation: Duo for Flute and Marimba
+instruments: Duo, Marimba, Flute
 score_url: /scores/insufficient-title.pdf
 blurb: Premiered 2019 by Cara Gould and Andrew Stern in Esber Recital Hall.
 program_notes: >

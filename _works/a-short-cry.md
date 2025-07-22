@@ -1,9 +1,10 @@
 ---
 layout: work
 title: a short cry
-blurb: Premiered 2023 by Ciara McGuire as a part of the Jang/Composition Collaboration
 year: 2025
 instrumentation: Solo Violin
+instruments: Violin, Solo
+blurb: Premiered 2023 by Ciara McGuire as a part of the Jang/Composition Collaboration
 youtube_id: 3IZBwXRu_hs
 score_url: /scores/a-short-cry.pdf
 program_notes: >

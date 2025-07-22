@@ -1,12 +1,16 @@
 ---
 layout: default
-title: Works | Connor Simpson
+title: Works
 permalink: /works/
 ---
 
 <section class="works-page">
   <div class="works-page-container">
-    {% include list-of-works.html %}
-    <div id="works-spacer"></div>
+    <div class="search-bar-container">
+      {% include search-bar.html style="body-search" %}
+    </div>
+    <div class="works-bar-container">
+      {% include list-of-works.html %}
+    </div>
   </div>
 </section>

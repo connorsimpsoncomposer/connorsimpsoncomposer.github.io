@@ -1,6 +1,9 @@
 ---
 layout: work
 title: O vos omnes
+year: 2023
+instrumentation: String Quartet
+instruments: Chamber Ensemble, Violin, Viola, Cello
 recording_url: https://www.mivosquartet.com/
 score_url: /scores/o-vos-omnes.pdf
 soundcloud_url: https://soundcloud.com/connor-simpson-326466060/o-vos-omnes

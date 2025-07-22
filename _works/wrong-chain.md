@@ -1,6 +1,9 @@
 ---
 layout: work
 title: Wrong Chain
+year: 2022
+instrumentation: Solo Violin
+instruments: Solo, Violin
 youtube_id: ZXia5BWOOkg
 blurb: >
   Premiered 2022 by Bailey Wantuch in Bobbio, Italy as a part of the soundSCAPE new music festival.

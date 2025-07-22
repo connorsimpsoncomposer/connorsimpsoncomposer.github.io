@@ -1,6 +1,9 @@
 ---
 layout: work
 title: As it were
+year: 2023
+instrumentation: Sinfonietta
+instruments: Sinfonietta, Chamber Orchestra, Orchestra, Large Ensemble
 youtube_id: 3IZBwXRu_hs?si=c9q6sSqrg9Yb-nRG
 blurb: >
   Premiered 2023 by the Eastman Graduate Composers' Sinfonietta, conducted by Serena Reuten.

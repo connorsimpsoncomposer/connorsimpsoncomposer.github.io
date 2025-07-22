@@ -1,6 +1,9 @@
 ---
 layout: work
 title: Mad Song
+year: 2021
+instrumentation: Baritone and Piano
+instruments: Duo, Solo, Voice, Baritone, Piano
 youtube_id: QPyV30pNzvw
 premiere: Premiered 2021 in Esber Recital Hall.
 performers:

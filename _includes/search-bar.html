@@ -1,0 +1,90 @@
+<div class="search-container {{ include.style }}">
+  <div class="search-input-wrapper">
+    <!-- <img src="/assets/icons/search-icon.svg" alt="Search icon" class="search-icon" /> -->
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <input type="text" id="search-input" placeholder="Search..." aria-label="Search works" autocomplete="off" />
+  </div>
+  <ul tabindex="-1" id="search-results"></ul>
+</div>
+
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+  let idx = null;
+  let worksData = [];
+
+  fetch("/works.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      worksData = data;
+
+      idx = lunr(function () {
+        this.pipeline.remove(lunr.stopWordFilter);
+        this.ref("id");
+        this.field("title");
+        this.field("instrumentation");
+        this.field("year");
+        this.field("instruments");
+
+        worksData.forEach(function (doc) {
+          this.add(doc);
+        }, this);
+      });
+    })
+    .catch((err) => {
+      console.error("Error fetching or parsing works.json:", err);
+    });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("search-input");
+    const resultsList = document.getElementById("search-results");
+
+    if (!input) return;
+
+    input.addEventListener("input", function () {
+      const query = this.value.trim();
+      resultsList.innerHTML = "";
+
+      if (!query || !idx) return;
+
+      const wildcardQuery = query
+        .split(/\s+/)
+        .map((term) => term + "*")
+        .join(" ");
+
+      let results = idx.search(wildcardQuery);
+
+      if (results.length === 0) {
+        const fuzzyQuery = query
+          .split(/\s+/)
+          .map((term) => `${term}~1`)
+          .join(" ");
+        results = idx.search(fuzzyQuery);
+      }
+
+      if (results.length === 0) {
+        resultsList.innerHTML = "<li class='no-results'>No results found</li>";
+        return;
+      }
+
+      results.forEach((result) => {
+        const item = worksData.find((w) => w.id == result.ref);
+
+        if (!item) return;
+
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <a href="${item.url}">
+            <strong>${item.title}</strong> (${item.year})
+            <small>${item.instrumentation}</small>
+          </a>`;
+        resultsList.appendChild(li);
+      });
+    });
+  });
+</script>

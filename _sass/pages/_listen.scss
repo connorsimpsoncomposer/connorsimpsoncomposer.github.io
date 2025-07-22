@@ -1,4 +1,8 @@
 /* VIDEO SECTION GRID */
+.listen-page-container {
+  margin-bottom: var(--gap-xl);
+}
+
 .video-container {
   display: grid;
   grid-template-columns: 1fr;

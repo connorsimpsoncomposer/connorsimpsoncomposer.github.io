@@ -1,6 +1,9 @@
 ---
 layout: work
 title: panic
+year: 2019
+instrumentation: Stereo Fixed Media
+instruments: Electronics, Fixed Media, Tape, Playback, Stereo
 dedication: >
   <em>panic</em> was selected for the 2020 New York City Electroacoustic Music Festival.
 program_notes: >

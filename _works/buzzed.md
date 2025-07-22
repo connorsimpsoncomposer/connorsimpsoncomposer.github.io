@@ -1,6 +1,9 @@
 ---
 layout: work
 title: Buzzed
+year: 2022
+instrumentation: Percussion Quartet
+instruments: percussion, multi-percussion, Chamber Ensemble
 youtube_id: ButIpyUoxYU
 blurb: Selected for performance as a part of Penn State's 2022/2023 Ensemble Call for Scores.
 performers:

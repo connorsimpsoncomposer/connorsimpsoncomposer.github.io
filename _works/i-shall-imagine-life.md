@@ -1,6 +1,9 @@
 ---
 layout: work
 title: i shall imagine life
+year: 2021
+instrumentation: Wind Quintet
+instruments: Wind Quintet, Winds, Flute, Oboe, Clarinet, Horn, Bassoon, Chamber Ensemble
 youtube_id: yqXZhKaCvSc
 blurb: "Premiered by Centre Winds 2021, in Esber Recital Hall."
 performers:

@@ -1,10 +1,17 @@
 /* Thank You Page Styles */
 
+.thank-you-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70vh;
+}
+
 .thank-you-container {
   max-width: 600px;
   margin: 3rem auto;
   padding: 2.5rem 2rem;
-  background-color: var(--bg-color);
+  background-color: var(--bg-dim);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);

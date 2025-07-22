@@ -1,0 +1,18 @@
+---
+layout: null
+permalink: /works.json
+---
+[
+  {% assign id = 0 %}
+  {% for work in site.works %}
+    {% assign id = id | plus: 1 %}
+    {
+      "id": {{ id }},
+      "title": {{ work.title | jsonify }},
+      "instrumentation": {{ work.instrumentation | jsonify }},
+      "instruments": {{ work.instruments | jsonify }},
+      "year": "{{ work.year }}",
+      "url": {{ work.url | relative_url | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

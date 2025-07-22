@@ -1,6 +1,9 @@
 ---
 layout: work
 title: ill
+year: 2021
+instrumentation: Quadraphonic Fixed Media
+instruments: Electronics, Fixed Media, Tape, Playback, Quad, Quadraphonic
 dedication: "<em>ill</em> was written and presented in Fall, 2021."
 program_notes: >
   <em>ill</em> recounts a moment of anxiety. <em>ill</em> does not seek

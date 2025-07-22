@@ -1,6 +1,9 @@
 ---
 layout: work
 title: Exile
+year: 2021
+instrumentation: Soprano and Reed Quintet
+instruments: Soprano, Voice, Chamber Ensemble, Winds, Clarinet, Flute, Saxophone, Oboe
 program_notes: >
   <em>Exile</em> seeks to recreate a musical moment of sadness and depression from the loss of a loved one.
 

@@ -1,6 +1,9 @@
 ---
 layout: work
 title: May the Lord protect my Wealth
+year: 2021
+instrumentation: String Quartet
+instruments: Chamber Ensemble, Violin, Viola, Cello
 youtube_id: rYeePBjNQGU
 premiere: Premiered 2021 in Esber Recital Hall.
 performers:

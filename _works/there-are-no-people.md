@@ -1,6 +1,9 @@
 ---
 layout: work
 title: there are no people
+year: 2022
+instrumentation: Duo for Soprano and Bass Flute
+instruments: Duo, Bass Flute, Soprano, Voice
 dedication: >
   <em>there are no people</em> was written for 
   <a href="https://www.sydeboobduo.com/">SydeBoob Duo</a> during their 2022 residency at Penn State.

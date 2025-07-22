@@ -1,6 +1,9 @@
 ---
 layout: work
 title: Prancer
+year: 2021
+instrumentation: Wind Ensemble
+instruments: Wind Ensemble, Band, Large Ensemble
 youtube_id: UsjJ9Ppt5kE?si=jLFNAikWPToZfhiW
 blurb: Premiered 2023 by the Penn State Symphonic Band, conducted by Gregory Drane
 program_notes: >

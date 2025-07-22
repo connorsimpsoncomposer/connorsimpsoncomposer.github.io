@@ -1,6 +1,9 @@
 ---
 layout: work
 title: who know's if the moon's a balloon
+year: 2022
+instrumentation: Loadbang Ensemble
+instruments: Trumpet, Trombone, Baritone, Voice, Bass Clarinet, Chamber Ensemble
 dedication: >
   <em>who know's if the moon's a balloon</em> was written for
   <a href="https://www.loadbang.com/" style="text-decoration: underline; font-weight: normal">Loadbang</a>

@@ -57,6 +57,7 @@ $gray-200: #e0e0e0;
 $gray-300: #cccccc;
 $gray-400: #aaaaaa;
 $gray-500: #888888;
+$gray-550: #696969;
 $gray-600: #555555;
 $gray-700: #333333;
 $gray-800: #222222;
@@ -82,8 +83,9 @@ $color-border: $gray-400;
 $color-link: $gray-600;
 $color-link-hover: $gray-700;
 $color-accent: $primary;
-$color-accent-hover: $primary-hover;
+$color-accent-hover: $gray-500;
 $color-accent-muted: $primary-muted;
+$highlight-color: $gray-500;
 
 /* Feedback States */
 $color-success: #4caf50;
@@ -106,8 +108,9 @@ $dark-theme: (
   color-link: $gray-200,
   color-link-hover: $gray-100,
   color-accent: $gray-600,
-  color-accent-hover: $primary-hover,
+  color-accent-hover: $gray-500,
   color-accent-muted: $gray-700,
+  highlight-color: $gray-500,
 );
 
 /* === Root Export for CSS Variables === */
@@ -135,6 +138,7 @@ $dark-theme: (
   --accent-color: #{$color-accent};
   --accent-hover: #{$color-accent-hover};
   --accent-muted: #{$color-accent-muted};
+  --highlight-color: #{$highlight-color};
 
   --gap-xxs: #{$space-xxs};
   --gap-xs: #{$space-xs};
@@ -173,5 +177,6 @@ $dark-theme: (
     --accent-color: #{map-get($dark-theme, color-accent)};
     --accent-hover: #{map-get($dark-theme, color-accent-hover)};
     --accent-muted: #{map-get($dark-theme, color-accent-muted)};
+    --accent-muted: #{map-get($dark-theme, highlight-color)};
   }
 }

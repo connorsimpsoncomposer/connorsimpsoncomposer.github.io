@@ -1,6 +1,9 @@
 ---
 layout: work
 title: Scordatura
+instrumentation: Tuba Quartet
+year: 2021
+instruments: Chamber Ensemble, Tuba, Euphonium, ETTT
 program_notes: >
   <em>Scordatura</em> creates a microtonal soundscape through the detuning of the ensemble’s valves.
   The work explores the physical phenomena of beating as well as harmonies found in just intonation

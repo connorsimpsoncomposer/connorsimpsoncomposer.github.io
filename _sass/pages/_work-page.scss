@@ -1,18 +1,21 @@
 .works-page-container {
-  width: fit-content;
+  width: 100%;
+  max-width: 1100px;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 2rem;
-  margin: $gap-xl auto;
+  gap: var(--gap-sm);
+  margin: $gap-lg auto;
   margin-bottom: 0;
   padding: 0 1rem;
+
+  @media (max-width: 900px) {
+    gap: 0px;
+    margin-top: 0;
+  }
 }
 
 .list-of-works {
-  flex: 0 0 280px;
-  max-height: 100%;
-  flex-shrink: 0;
   padding-right: 1rem;
   top: 2rem;
   width: 320px;
@@ -21,7 +24,6 @@
 
 @media (min-width: 901px) {
   .list-of-works {
-    position: sticky;
     top: 2rem;
     overflow-y: auto;
   }
@@ -31,9 +33,9 @@
   .list-of-works {
     display: block;
     width: 100%;
-    position: relative; // override sticky
-    max-height: none; // allow full height
-    overflow: visible; // allow full scroll
+    position: relative;
+    max-height: none;
+    overflow: visible;
   }
 }
 
@@ -62,10 +64,6 @@
   color: #444;
 }
 
-.work-item {
-  margin-bottom: 1.2rem;
-}
-
 .work-item .title p {
   margin: 0;
   font-weight: 500;
@@ -79,24 +77,37 @@
   text-align: left;
 }
 
-.work-item .title a {
+.work-item {
+  margin: 0;
+  display: block;
+  padding: var(--gap-sm);
   color: var(--text-color);
   text-decoration: none;
+  transition: background-color 0.2s ease;
+  border-radius: var(--radius);
 }
 
-.work-item .title a:hover {
-  text-decoration: underline;
+.work-item:hover,
+.work-item:focus {
+  background-color: var(--highlight-color);
+  outline: none;
 }
 
 .work-item .instrumentation p {
   margin: 0;
   font-size: 0.95rem;
-  color: var(--text-muted);
   font-style: italic;
 }
 
 .work-item .title p {
   font-weight: 600;
+}
+
+.work-item .title p,
+.work-item .instrumentation p {
+  color: var(--surface);
+  margin: 0;
+  /* Remove vertical margins */
 }
 
 .work-body {
@@ -148,9 +159,8 @@
 .list-of-works details {
   background-color: var(--accent-color);
   border-radius: 10px;
-  padding: 1rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2pxj6px rgba(0, 0, 0, 0.06);
   transition:
     box-shadow var(--transition),
     transform var(--transition);
@@ -168,6 +178,10 @@
 .list-of-works details[open] {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
   transform: translateY(-1px);
+}
+
+.list-of-works summary {
+  padding: var(--gap-sm);
 }
 
 .list-of-works details summary {
@@ -197,8 +211,7 @@
   transform: rotate(90deg);
 }
 
-.list-of-works details > *:not(summary) {
-  margin-top: 0.75rem;
+.list-of-works details>*:not(summary) {
   color: var(--text-accent);
   font-size: 0.95rem;
   line-height: 1.5;
@@ -219,10 +232,15 @@
   text-align: center;
 }
 
-.performers-list li {
-  font-size: 0.95rem;
-  font-style: italic;
-  list-style-type: none;
+.performers-list {
+  margin-bottom: var(--gap);
+
+  li {
+    font-size: 0.95rem;
+    font-style: italic;
+    list-style-type: none;
+    margin: 0;
+  }
 }
 
 .jwpepper-plug {
@@ -240,16 +258,27 @@
   display: none;
 }
 
-#works-spacer {
-  width: 760px;
+.search-bar-container {
+  order: 1;
+  flex: 1;
+
+  @media (max-width: 900px) {
+    order: 0;
+  }
+}
+
+.works-bar-container {
+  order: 0;
+  flex: 0 0 280px;
+
+  @media (max-width: 900px) {
+    order: 1;
+  }
 }
 
 @media (max-width: 900px) {
-  #works-spacer {
-    width: 0;
-  }
-
   .works-page-container {
+    flex-direction: column;
     width: 100%;
   }
 
