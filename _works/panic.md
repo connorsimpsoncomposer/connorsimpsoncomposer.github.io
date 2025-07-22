@@ -1,6 +1,8 @@
 ---
 layout: work
 title: panic
+categories:
+  - With Electronics
 year: 2019
 instrumentation: Stereo Fixed Media
 instruments: Electronics, Fixed Media, Tape, Playback, Stereo

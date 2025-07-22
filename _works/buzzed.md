@@ -2,6 +2,8 @@
 layout: work
 title: Buzzed
 year: 2022
+categories:
+  - Chamber Ensemble
 instrumentation: Percussion Quartet
 instruments: percussion, multi-percussion, Chamber Ensemble
 youtube_id: ButIpyUoxYU

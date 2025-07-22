@@ -2,6 +2,8 @@
 layout: work
 title: Something which wanders and falls
 year: 2022
+categories:
+  - Chamber Ensemble
 instrumentation: Hypercube Ensemble
 instruments: Accordion, Piano, Saxophone, Electric Guitar, Chamber Ensemble
 youtube_id: dPyRrVelyOs

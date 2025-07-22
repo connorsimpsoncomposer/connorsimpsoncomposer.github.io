@@ -2,6 +2,9 @@
 layout: work
 title: Exile
 year: 2021
+categories:
+  - With Voice
+  - Chamber Ensemble
 instrumentation: Soprano and Reed Quintet
 instruments: Soprano, Voice, Chamber Ensemble, Winds, Clarinet, Flute, Saxophone, Oboe
 program_notes: >

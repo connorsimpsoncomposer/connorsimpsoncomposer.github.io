@@ -2,6 +2,9 @@
 layout: work
 title: there are no people
 year: 2022
+categories:
+  - Chamber Ensemble
+  - With Voice
 instrumentation: Duo for Soprano and Bass Flute
 instruments: Duo, Bass Flute, Soprano, Voice
 dedication: >

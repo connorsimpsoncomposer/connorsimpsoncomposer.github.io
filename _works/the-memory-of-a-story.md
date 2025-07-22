@@ -2,6 +2,8 @@
 layout: work
 title: the Memory of a Story
 year: 2022
+categories:
+  - Chamber Ensemble
 instrumentation: Saxophone Quartet
 instruments: Soprano Sax, Alto Sax, Bari Sax, Chamber Ensemble
 dedication: >

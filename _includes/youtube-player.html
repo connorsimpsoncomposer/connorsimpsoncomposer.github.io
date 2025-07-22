@@ -1,0 +1,9 @@
+{% if include.youtube_id %}
+<div class="videobox {% if include.context == 'works' %}works-video{% else %}listen-video{% endif %}">
+  <iframe src="https://www.youtube.com/embed/{{ include.youtube_id }}"
+    title="{{ include.title | default: 'YouTube video player' }}" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
+</div>
+{% endif %}

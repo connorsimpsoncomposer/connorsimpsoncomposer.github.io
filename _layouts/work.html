@@ -17,15 +17,7 @@ layout: default
       </div>
 
       {% if page.youtube_id %}
-      <div class="videobox works-video">
-        <iframe
-          src="https://www.youtube.com/embed/{{ page.youtube_id }}"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+        {% include youtube-player.html youtube_id=page.youtube_id title=page.title context="works" %}
       {% endif %}
 
       <div class="work-text">
@@ -84,16 +76,7 @@ layout: default
         {% endif %}
 
         {% if page.soundcloud_url %}
-        <div class="soundcloud-link">
-          <iframe 
-            width="100%" 
-            height="100" 
-            scrolling="no" 
-            frameborder="no" 
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url={{ page.soundcloud_url | uri_escape }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-          </iframe>
-        </div>
+          {% include soundcloud-player.html url=page.soundcloud_url %}
         {% endif %}
 
         <div class="contact-for-performance">

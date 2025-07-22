@@ -1,6 +1,10 @@
 .index-content {
   max-width: 880px;
   padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 75vh;
 
   .index-grid {
     display: grid;

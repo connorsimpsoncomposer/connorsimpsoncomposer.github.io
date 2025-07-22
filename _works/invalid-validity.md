@@ -2,6 +2,8 @@
 layout: work
 title: Invalid Validity
 year: 2021
+categories:
+  - With Electronics
 instrumentation: Open Instrumentation and Fixed Media
 instruments: Electronics, Fixed Media, Tape, Playback, Stereo, Open Instrumentation, Any, All,
 dedication: >

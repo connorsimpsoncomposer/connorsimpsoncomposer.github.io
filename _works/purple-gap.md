@@ -1,8 +1,10 @@
 ---
 layout: work
 title: Purple Gap
-instrumentation: Solo Vibraphone
 year: 2022
+categories:
+  - Solo
+instrumentation: Solo Vibraphone
 instruments: Solo, Vibraphone, Percussion, Pitched
 youtube_id: PGpdaPr-kqA
 blurb: Premiered 2022 by Corey Sittinger as a part of Penn State's Vibraphone Century Festival.

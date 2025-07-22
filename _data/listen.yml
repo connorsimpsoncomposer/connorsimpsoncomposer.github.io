@@ -1,5 +1,5 @@
 videos:
-  - embed_url: "https://www.youtube.com/embed/3IZBwXRu_hs?si=fWCfROEV8oRCoVBx"
+  - youtube_id: "3IZBwXRu_hs"
     piece_title: "As it were"
     year: 2023
     instrumentation: "for sinfonietta"
@@ -8,7 +8,7 @@ videos:
     location: "Rochester, NY"
     performance_year: 2023
 
-  - embed_url: "https://www.youtube.com/embed/-ytDBvh7L_g?si=0OxdbEzLZtITrqxx"
+  - youtube_id: "-ytDBvh7L_g"
     piece_title: "a short cry"
     year: 2025
     instrumentation: "for solo violin"
@@ -17,7 +17,7 @@ videos:
     location: "Rochester, NY"
     performance_year: 2025
 
-  - embed_url: "https://www.youtube.com/embed/ZXia5BWOOkg?si=KAJ0dQpbMkxvdZq3"
+  - youtube_id: "ZXia5BWOOkg"
     piece_title: "Wrong Chain"
     year: 2022
     instrumentation: "for solo violin"
@@ -25,7 +25,7 @@ videos:
     location: "Bobbio, Italy"
     performance_year: 2022
 
-  - embed_url: "https://www.youtube.com/embed/UsjJ9Ppt5kE?si=Vr6-Mp_VAHovQpBj"
+  - youtube_id: "UsjJ9Ppt5kE"
     piece_title: "Prancer"
     year: 2021
     instrumentation: "for wind ensemble"
@@ -34,7 +34,7 @@ videos:
     location: "State College, PA"
     performance_year: 2023
 
-  - embed_url: "https://www.youtube.com/embed/dPyRrVelyOs?si=kMFJrgmSPvebffQy"
+  - youtube_id: "dPyRrVelyOs"
     piece_title: "Something which wanders and falls"
     year: 2022
     instrumentation: "for Hypercube Ensemble"
@@ -42,7 +42,7 @@ videos:
     location: "NYC, NY"
     performance_year: 2022
 
-  - embed_url: "https://www.youtube.com/embed/PGpdaPr-kqA?si=uB-MJunJyp0rJHS-"
+  - youtube_id: "PGpdaPr-kqA"
     piece_title: "Purple Gap"
     year: 2022
     instrumentation: "for solo vibraphone"
@@ -51,7 +51,7 @@ videos:
     performance_year: 2022
 
 audio:
-  - embed_url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1499403619"
+  - soundcloud_url: "https://soundcloud.com/connor-simpson-326466060/o-vos-omnes"
     piece_title: "O vos omnes"
     year: 2023
     instrumentation: "for string quartet"
@@ -60,7 +60,7 @@ audio:
     location: "State College, PA"
     performance_year: 2023
 
-  - embed_url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1044751939"
+  - soundcloud_url: "https://soundcloud.com/connor-simpson-326466060/i-shall-imagine-life"
     piece_title: "i shall imagine life"
     year: 2020
     instrumentation: "for woodwind quintet"
@@ -68,12 +68,12 @@ audio:
     location: "State College, PA"
     performance_year: 2021
 
-  - embed_url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/724613791"
+  - soundcloud_url: "https://soundcloud.com/connor-simpson-326466060/panic"
     piece_title: "Panic"
     year: 2019
     instrumentation: "fixed media"
 
-  - embed_url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1035566257"
+  - soundcloud_url: "https://soundcloud.com/connor-simpson-326466060/mad-song"
     piece_title: "Mad Song"
     year: 2020
     instrumentation: "for baritone voice and piano"

@@ -1,6 +1,8 @@
 ---
 layout: work
 title: Wrong Chain
+categories:
+  - Solo
 year: 2022
 instrumentation: Solo Violin
 instruments: Solo, Violin

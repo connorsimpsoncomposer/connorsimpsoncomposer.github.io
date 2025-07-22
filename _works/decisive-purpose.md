@@ -1,7 +1,9 @@
 ---
 layout: work
 title: Decisive Purpose
-year: 2020
+year: 2021
+categories:
+  - Chamber Ensemble
 instrumentation: Duo for Tuba and Percussion
 instruments: Tuba, percussion, crotales, duo
 youtube_id: yiZ1nXqlNh8

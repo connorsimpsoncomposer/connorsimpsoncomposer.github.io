@@ -2,6 +2,8 @@
 layout: work
 title: i shall imagine life
 year: 2021
+categories:
+  - Chamber Ensemble
 instrumentation: Wind Quintet
 instruments: Wind Quintet, Winds, Flute, Oboe, Clarinet, Horn, Bassoon, Chamber Ensemble
 youtube_id: yqXZhKaCvSc

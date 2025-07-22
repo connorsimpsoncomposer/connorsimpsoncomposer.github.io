@@ -2,6 +2,8 @@
 layout: work
 title: Insufficient Title
 year: 2019
+categories:
+  - Chamber Ensemble
 instrumentation: Duo for Flute and Marimba
 instruments: Duo, Marimba, Flute
 score_url: /scores/insufficient-title.pdf

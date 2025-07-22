@@ -2,6 +2,8 @@
 layout: work
 title: May the Lord protect my Wealth
 year: 2021
+categories:
+  - Chamber Ensemble
 instrumentation: String Quartet
 instruments: Chamber Ensemble, Violin, Viola, Cello
 youtube_id: rYeePBjNQGU

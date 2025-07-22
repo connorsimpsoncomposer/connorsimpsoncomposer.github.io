@@ -2,6 +2,8 @@
 layout: work
 title: Broken Tongue
 year: 2019
+categories:
+  - Solo
 instrumentation: Solo Piano
 instruments: Piano, Solo
 dedication: Premiered by Haley Fennell 2019, in Esber Recital Hall.

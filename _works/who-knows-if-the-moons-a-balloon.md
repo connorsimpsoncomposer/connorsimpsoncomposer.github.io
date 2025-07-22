@@ -2,6 +2,9 @@
 layout: work
 title: who know's if the moon's a balloon
 year: 2022
+categories:
+  - Chamber Ensemble
+  - With Voice
 instrumentation: Loadbang Ensemble
 instruments: Trumpet, Trombone, Baritone, Voice, Bass Clarinet, Chamber Ensemble
 dedication: >

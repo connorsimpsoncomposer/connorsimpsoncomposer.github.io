@@ -2,6 +2,9 @@
 layout: work
 title: Noisy Bugle
 year: 2022
+categories:
+  - Solo
+  - With Electronics
 instrumentation: Noisybugle and Live Electronics
 instruments: Electronics, Live Electronics, Processing, DSP, Stereo, homemade instrument, Max,
 program_notes: >

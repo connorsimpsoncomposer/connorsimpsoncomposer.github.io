@@ -2,6 +2,8 @@
 layout: work
 title: Allargando
 year: 2021
+categories:
+  - With Electronics
 instrumentation: Fixed Media
 instruments: Electronics, Fixed Media, Tape, Playback, Stereo
 dedication: |

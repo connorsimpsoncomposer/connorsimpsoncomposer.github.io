@@ -1,6 +1,8 @@
 ---
 layout: work
 title: O vos omnes
+categories:
+  - Chamber Ensemble
 year: 2023
 instrumentation: String Quartet
 instruments: Chamber Ensemble, Violin, Viola, Cello

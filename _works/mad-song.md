@@ -2,6 +2,9 @@
 layout: work
 title: Mad Song
 year: 2021
+categories:
+  - Solo
+  - With Voice
 instrumentation: Baritone and Piano
 instruments: Duo, Solo, Voice, Baritone, Piano
 youtube_id: QPyV30pNzvw
