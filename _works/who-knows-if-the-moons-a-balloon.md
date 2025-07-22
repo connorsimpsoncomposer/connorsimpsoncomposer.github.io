@@ -13,6 +13,7 @@ dedication: >
   during their 2022 residency at Penn State.
 lyrics_title: who know's if the moon's a balloon
 lyrics_author: by E. E. Cummings
+lyrics_align: left
 lyrics: |
   who knows if the moon’s
   a balloon,coming out of a keen city
