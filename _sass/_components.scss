@@ -71,7 +71,7 @@
   }
 }
 
-.menu-toggle-checkbox:checked ~ .navbar {
+.menu-toggle-checkbox:checked~.navbar {
   transform: translateX(0%);
 }
 
@@ -147,9 +147,22 @@
     align-items: center;
     justify-content: center;
 
+    svg {
+      width: 1.3em;
+      height: 1.3em;
+      fill: currentColor;
+      transition: fill var(--transition);
+      display: block;
+    }
+
     &:hover,
     &:focus {
       color: var(--link-hover);
+
+      svg {
+        fill: currentColor;
+      }
+
       outline: none;
     }
   }

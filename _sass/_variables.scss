@@ -1,6 +1,15 @@
 /* === Typography === */
-$font-family-base: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
-$font-family-heading: $font-family-base;
+
+:root {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "InterVariable", sans-serif;
+  }
+}
+
 $font-weight-normal: 400;
 $font-weight-bold: 600;
 
@@ -115,7 +124,6 @@ $dark-theme: (
 
 /* === Root Export for CSS Variables === */
 :root {
-  --font-family: #{$font-family-base};
   --transition: #{$transition};
   --radius: #{$radius};
 

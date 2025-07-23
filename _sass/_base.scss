@@ -15,7 +15,6 @@ html {
 }
 
 body {
-  font-family: $font-family-base;
   font-size: $fs-base;
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -139,7 +138,7 @@ ol {
   padding-left: 0;
 }
 
-li + li {
+li+li {
   margin-top: 0.5rem;
 }
 

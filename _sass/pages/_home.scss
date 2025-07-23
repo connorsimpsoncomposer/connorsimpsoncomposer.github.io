@@ -1,7 +1,7 @@
 .index-content {
   max-width: 880px;
-  padding-block: 2rem;
   display: flex;
+  margin-bottom: var(--gap);
   flex-direction: column;
   justify-content: center;
   min-height: 75vh;
@@ -35,6 +35,7 @@
     margin: var(--gap-sm);
     max-width: 600px;
     margin-inline: auto;
+    padding: 0 var(--gap-sm) 0 var(--gap-sm);
     text-align: center;
   }
 }
