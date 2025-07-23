@@ -210,7 +210,7 @@
   transform: rotate(90deg);
 }
 
-.list-of-works details > *:not(summary) {
+.list-of-works details>*:not(summary) {
   color: var(--text-accent);
   font-size: 0.95rem;
   line-height: 1.5;
