@@ -4,11 +4,11 @@
   margin-bottom: var(--gap);
   flex-direction: column;
   justify-content: center;
-  min-height: 75vh;
+  min-height: 80vh;
 
   .index-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
 
     @media (max-width: 600px) {
