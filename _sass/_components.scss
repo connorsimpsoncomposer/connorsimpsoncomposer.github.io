@@ -71,7 +71,7 @@
   }
 }
 
-.menu-toggle-checkbox:checked~.navbar {
+.menu-toggle-checkbox:checked ~ .navbar {
   transform: translateX(0%);
 }
 
