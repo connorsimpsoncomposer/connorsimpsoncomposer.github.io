@@ -23,7 +23,9 @@
     align-items: center;
     text-align: center;
 
-    .index-link {
+    .home-image-link {
+      font-size: clamp(1rem, 4vw, 1.5rem);
+      font-weight: bold;
       display: block;
       position: relative;
       width: 100%;
