@@ -7,6 +7,19 @@
   min-height: 100vh;
 }
 
+.grain-overlay {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-image: url("/_assets/images/noise-image.png");
+  opacity: 0.18;
+  mix-blend-mode: overlay;
+}
+
 // Wraps main content between header and footer
 .content-wrap {
   flex: 1;
