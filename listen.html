@@ -4,71 +4,81 @@ title: Listen
 permalink: /listen/
 ---
 
-<section class="listen-page-container">
-  <div class="media-header">
-    <h3>Video</h3>
-  </div>
-  <div class="video-container">
-    {% for video in site.data.listen.videos %}
-    <div class="boxofbox">
-      {% include youtube-player.html youtube_id=video.youtube_id title=video.title %}
-      <div class="listen-blurb">
-        <p>
-          <em>{{ video.piece_title }}</em> ({{ video.year }}) {{ video.instrumentation }}<br />
-          {{ video.performers }}<br />
-          {% if video.venue %}{{ video.venue }}{% endif %}
-          {% if video.venue and video.location %} | {% endif %}
-          {% if video.location %}{{ video.location }}{% endif %}
-          
-          {% if video.venue or video.location %}
-            {% if video.performance_year %} | {% endif %}
-          {% endif %}
-          
-          {% if video.performance_year %}{{ video.performance_year }}{% endif %}
-        </p>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
+<section class="container listen-content">
 
-  <div class="audio-container">
+  <div class="glass-pane">
+
     <div class="media-header">
-      <h3>Audio</h3>
+      <h3>Video</h3>
     </div>
-    {% for track in site.data.listen.audio %}
-    <div class="audio-box">
-      {% include soundcloud-player.html url=track.soundcloud_url %}
-      <div class="listen-blurb">
-        <p>
-          <em>{{ track.piece_title }}</em> ({{ track.year }}) {{ track.instrumentation }}<br />
-          {% if track.performers %}{{ track.performers }}<br />{% endif %}
-          {% if track.location %}{{ track.location }}{% endif %}
-          {% if track.location and track.performance_year %} | {% endif %}
-          {% if track.performance_year %}{{ track.performance_year }}{% endif %}
+
+    <div class="video-container">
+      {% for video in site.data.listen.videos %}
+      <div class="boxofbox fade-in">
+        {% include youtube-player.html youtube_id=video.youtube_id title=video.title %}
+        <div class="listen-blurb">
+          <p>
+            <em>{{ video.piece_title }}</em> ({{ video.year }}) {{ video.instrumentation }}<br />
+            {{ video.performers }}<br />
+            {% if video.venue %}{{ video.venue }}{% endif %}
+            {% if video.venue and video.location %} | {% endif %}
+            {% if video.location %}{{ video.location }}{% endif %}
+            
+            {% if video.venue or video.location %}
+              {% if video.performance_year %} | {% endif %}
+            {% endif %}
+            
+            {% if video.performance_year %}{{ video.performance_year }}{% endif %}
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="audio-container">
+      <div class="media-header">
+        <h3>Audio</h3>
+      </div>
+      {% for track in site.data.listen.audio %}
+      <div class="audio-box fade-in">
+        {% include soundcloud-player.html url=track.soundcloud_url %}
+        <div class="listen-blurb">
+          <p>
+            <em>{{ track.piece_title }}</em> ({{ track.year }}) {{ track.instrumentation }}<br />
+            {% if track.performers %}{{ track.performers }}<br />{% endif %}
+            {% if track.location %}{{ track.location }}{% endif %}
+            {% if track.location and track.performance_year %} | {% endif %}
+            {% if track.performance_year %}{{ track.performance_year }}{% endif %}
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+
+      <div class="for-more">
+        <p>Find more recordings on my
+          <a href="https://on.soundcloud.com/C1Wra">
+            SoundCloud
+          </a>
+           or 
+          <a href="https://www.youtube.com/channel/UC405Ank2WNNjmoKRCFzxtAA">
+            YouTube
+          </a>
         </p>
       </div>
-    </div>
-    {% endfor %}
 
-    <div class="for-more">
-      <p>Find more recordings on my
-        <a href="https://on.soundcloud.com/C1Wra">
-          SoundCloud
-        </a>
-         or 
-        <a href="https://www.youtube.com/channel/UC405Ank2WNNjmoKRCFzxtAA">
-          YouTube
-        </a>
-      </p>
+      <div class="listen-score-plug">
+        <p>
+          Select scores available for purchase on
+          <a href="https://www.jwpepper.com/myscore/ConnorSimpson">
+            JW Pepper
+          </a>
+        </p>
+      </div>
+
     </div>
 
-    <div class="listen-score-plug">
-      <p>
-        Select scores available for purchase on
-        <a href="https://www.jwpepper.com/myscore/ConnorSimpson">
-          JW Pepper
-        </a>
-      </p>
-    </div>
   </div>
+  <script src="/_assets/js/scroll-animations.js" defer></script>
+  <script src="/_assets/js/scroll-visualizer.js" defer></script>
 </section>
+<svg id="scroll-visualizer" aria-hidden="true"></svg>

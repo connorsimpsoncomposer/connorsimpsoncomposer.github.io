@@ -60,6 +60,11 @@ audio:
     location: "State College, PA"
     performance_year: 2023
 
+  - soundcloud_url: "https://soundcloud.com/connor-simpson-326466060/panic"
+    piece_title: "Panic"
+    year: 2019
+    instrumentation: "fixed media"
+
   - soundcloud_url: "https://soundcloud.com/connor-simpson-326466060/i-shall-imagine-life"
     piece_title: "i shall imagine life"
     year: 2020
@@ -67,11 +72,6 @@ audio:
     performers: "Centre Winds"
     location: "State College, PA"
     performance_year: 2021
-
-  - soundcloud_url: "https://soundcloud.com/connor-simpson-326466060/panic"
-    piece_title: "Panic"
-    year: 2019
-    instrumentation: "fixed media"
 
   - soundcloud_url: "https://soundcloud.com/connor-simpson-326466060/mad-song"
     piece_title: "Mad Song"

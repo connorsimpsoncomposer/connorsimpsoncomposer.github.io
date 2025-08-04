@@ -58,12 +58,6 @@
   margin-right: var(--gap-xs);
 }
 
-.back-to-works {
-  font-size: 1rem;
-  text-decoration: none;
-  color: #444;
-}
-
 .work-item .title p {
   margin: 0;
   font-weight: 500;
@@ -114,7 +108,7 @@
   flex: 1;
   max-width: 760px;
   padding-right: 1rem;
-  margin-bottom: var(--gap);
+  margin-bottom: var(--gap-lg);
 }
 
 .works-video {
@@ -298,7 +292,7 @@
     padding: 0.6rem;
     font-size: 1rem;
     font-weight: 600;
-    background-color: var(--accent-color);
+    background-color: var(--bg-dim);
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -323,6 +317,5 @@
 
   .work-body {
     max-width: 100%;
-    padding: 0;
   }
 }

@@ -1,15 +1,5 @@
 /* === Typography === */
 
-:root {
-  font-family: "Inter", sans-serif;
-}
-
-@supports (font-variation-settings: normal) {
-  :root {
-    font-family: "InterVariable", sans-serif;
-  }
-}
-
 $font-weight-normal: 400;
 $font-weight-bold: 600;
 
@@ -78,8 +68,8 @@ $primary-muted: #bbbbbb;
 
 /* Semantic Roles */
 $color-bg: $gray-300;
-$color-surface: $gray-700;
-$color-surface-alt: $gray-400;
+$color-surface: $gray-800;
+$color-surface-alt: $gray-600;
 $color-bg-mid: $gray-600;
 $color-bg-dim: $gray-500;
 
@@ -106,7 +96,7 @@ $color-info: #2196f3;
 $dark-theme: (
   color-bg: $gray-700,
   color-surface: $gray-200,
-  color-surface-alt: $gray-500,
+  color-surface-alt: $gray-700,
   color-bg-mid: $gray-700,
   color-bg-dim: $gray-800,
   color-text: $gray-200,
