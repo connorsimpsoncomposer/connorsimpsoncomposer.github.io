@@ -1,6 +1,6 @@
 .works-page-container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1280px;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -106,7 +106,6 @@
 
 .work-body {
   flex: 1;
-  max-width: 760px;
   padding-right: 1rem;
   margin-bottom: var(--gap-lg);
 }
