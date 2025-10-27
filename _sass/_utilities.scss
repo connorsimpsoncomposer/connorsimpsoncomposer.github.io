@@ -72,15 +72,19 @@
   }
 }
 
-.hover-ink-brighten {
+.bw-hover-color {
   position: relative;
   overflow: visible;
   border-radius: var(--radius);
-  transition: filter var(--transition);
+  transition: filter $transition;
+
+  // Base state: black and white
+  filter: grayscale(1) contrast(1.08);
 
   &:hover,
   &:focus {
-    filter: brightness(1.32) contrast(0.92);
+    // Hover: restore color
+    filter: grayscale(0) contrast(1);
   }
 
   &::after {
