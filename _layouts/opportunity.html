@@ -1,0 +1,91 @@
+---
+layout: default
+body_class: opportunity
+---
+
+<article class="opportunity-page glass-pane">
+
+  <header class="opportunity-header">
+    <h1>{{ page.title }}</h1>
+
+    <dl class="opportunity-meta">
+      {% if page.deadline %}
+      <dt>Deadline</dt>
+      <dd>{{ page.deadline | date: "%B %-d, %Y" }}</dd>
+      {% endif %}
+
+      {% if page.month %}
+      <dt>Month</dt>
+      <dd>{{ page.month }}</dd>
+      {% endif %}
+
+      {% if page.event-dates %}
+      <dt>Event Dates</dt>
+      <dd>{{ page.event-dates }}</dd>
+      {% endif %}
+
+      {% if page.category %}
+      <dt>Category</dt>
+      <dd>{{ page.category }}</dd>
+      {% endif %}
+
+      {% if page.location %}
+      <dt>Location</dt>
+      <dd>{{ page.location }}</dd>
+      {% endif %}
+
+      {% if page.faculty %}
+      <dt>Faculty</dt>
+      <dd>{{ page.faculty | join: ", " }}</dd>
+      {% endif %}
+
+      {% if page.ensembles %}
+      <dt>Ensembles</dt>
+      <dd>{{ page.ensembles | join: ", " }}</dd>
+      {% endif %}
+
+      {% if page.instrumentation %}
+      <dt>Instrumentation</dt>
+      <dd>{{ page.instrumentation }}</dd>
+      {% endif %}
+
+      {% if page.tuition %}
+      <dt>Tuition / Cost</dt>
+      <dd>{{ page.tuition }}</dd>
+      {% endif %}
+
+      {% if page.funding %}
+      <dt>Funding</dt>
+      <dd>{{ page.funding }}</dd>
+      {% endif %}
+
+      {% if page.travel-covered %}
+      <dt>Travel Covered</dt>
+      <dd>{{ page.travel-covered }}</dd>
+      {% endif %}
+
+      {% if page.apply-with %}
+      <dt>Application Materials</dt>
+      <dd>{{ page.apply-with }}</dd>
+      {% endif %}
+
+      {% if page.eligibility %}
+      <dt>Eligibility</dt>
+      <dd>{{ page.eligibility }}</dd>
+      {% endif %}
+    </dl>
+
+    <div class="opportunity-links">
+      {% if page.more-info-link %}
+      <p><a class="external-link" href="{{ page.more-info-link }}">More Information →</a></p>
+      {% endif %}
+      {% if page.application-link %}
+      <p><a class="external-link" href="{{ page.application-link }}">Apply Here →</a></p>
+      {% endif %}
+    </div>
+  </header>
+
+  <section class="opportunity-content">
+    {{ content }}
+  </section>
+</article>

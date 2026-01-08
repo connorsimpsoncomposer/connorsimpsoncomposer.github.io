@@ -1,0 +1,67 @@
+/* ===========================
+   SINGLE OPPORTUNITY PAGE
+   =========================== */
+
+body.opportunity {
+  .opportunity-page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: $gap-lg $gap;
+  }
+
+  .opportunity-header {
+    margin-bottom: $gap-lg;
+
+    h1 {
+      margin-bottom: $gap-xs;
+    }
+
+    .opportunity-summary {
+      max-width: 48rem;
+      font-size: $fs-md;
+      color: var(--text-muted);
+    }
+  }
+
+  .opportunity-layout {
+    display: grid;
+    grid-template-columns: 1fr 18rem;
+    gap: $gap-lg;
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .opportunity-content {
+    p+p {
+      margin-top: $gap-sm;
+    }
+  }
+
+  .opportunity-sidebar {
+    font-size: $fs-sm;
+
+    .opportunity-meta {
+      margin-bottom: $gap;
+    }
+
+    .opportunity-actions {
+      display: flex;
+      flex-direction: column;
+      gap: $gap-xs;
+
+      a {
+        font-size: $fs-sm;
+      }
+    }
+  }
+}
+
+.opportunities-controls-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  /* pushes children to the right */
+  margin-top: 1rem;
+  /* optional spacing from above */
+}

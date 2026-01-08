@@ -1,0 +1,638 @@
+/* ===========================
+   OPPORTUNITIES INDEX PAGE
+   =========================== */
+
+body.opportunities {
+  .opportunities-page {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: $gap-lg $gap;
+    overflow-x: hidden;
+  }
+
+  /* ---------- Page Header ---------- */
+  .opportunities-header {
+    margin-bottom: $gap-xl;
+
+    h1 {
+      margin-bottom: $gap-xs;
+    }
+
+    .opportunities-intro {
+      font-size: $fs-sm;
+      color: var(--text-muted);
+    }
+  }
+
+  /* ---------- Shared Accordion Styles (Categories & Archive) ---------- */
+  .opportunity-category,
+  .opportunity-archive {
+    margin-bottom: $gap;
+
+    &[open] summary::before {
+      transform: rotate(90deg);
+      opacity: 1;
+    }
+
+    &[open] summary {
+      margin-bottom: $gap-sm;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      background-color: $color-surface;
+      border-radius: $radius;
+      padding: $gap-sm;
+      display: flex;
+      gap: $gap-xs;
+      user-select: none;
+      transition: color 0.2s ease;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::before {
+        content: "›";
+        font-size: $fs-lg;
+        transition: transform 0.2s ease;
+        opacity: 0.7;
+      }
+
+      &:hover {
+        color: var(--color-link);
+      }
+    }
+  }
+
+  .opportunity-category {
+    background-color: var(--bg-dim);
+    border-radius: $radius;
+
+    h2 {
+      display: inline-flex;
+      align-items: center;
+      font-size: $fs-lg;
+      font-weight: 700;
+    }
+
+    .category-count {
+      margin-left: auto;
+      font-size: $fs-sm;
+      opacity: 0.5;
+    }
+  }
+
+  /* ===========================
+     REFINED CONTROLS LAYOUT
+     =========================== */
+
+  .opportunities-controls-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  /* --- Tier 1: Filters (Right Aligned) --- */
+  .tier-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: 42px;
+
+    .filter-toggles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+  }
+
+  .filter-pill {
+    border-radius: $radius;
+    cursor: pointer;
+    user-select: none;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border-radius: 20px;
+      color: var(--color-link);
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+
+    input:checked+span {
+      background-color: rgba(var(--color-success-rgb), 0.1);
+      color: var(--color-success);
+      border-color: var(--color-success);
+    }
+
+    #fav-count {
+      font-size: 0.65rem;
+      opacity: 0.7;
+      margin-left: 2px;
+    }
+  }
+
+  /* --- Tier 2: Organization (Search + Sort) --- */
+  .tier-organization {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+
+    .opportunities-search {
+      flex: 1; // Search grows to fill space
+
+      // Ensure the search include doesn't have its own huge margins
+      form,
+      input {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    .opportunities-org-actions {
+      display: flex;
+      align-items: center;
+      gap: $gap-xs;
+      flex-shrink: 0; // Prevents buttons from squishing
+    }
+  }
+
+  /* --- Tier 3: Action Pod (The Floating Utility) --- */
+  .actions-group-pod {
+    margin-right: auto;
+    display: none;
+    padding: 0.5rem;
+    border-radius: $radius;
+    display: flex;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    background-color: var(--accent-color);
+    width: fit-content;
+    z-index: 100;
+
+    // Use your animation here
+    &.animate-pop {
+      animation: popOut 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    .pod-label {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      padding-right: $gap-xxs;
+    }
+
+    .pod-buttons {
+      display: flex;
+      gap: 0.5rem;
+
+      button {
+        background: none;
+        border: none;
+        color: var(--text-main);
+        padding: 6px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          color: var(--color-link);
+          transform: translateY(-1px);
+        }
+
+        &.btn-danger:hover {
+          color: var(--color-error);
+        }
+      }
+    }
+  }
+
+  /* ---------- Custom Dropdown & Sort ---------- */
+  .opportunities-sort {
+    display: inline-flex;
+    align-items: center;
+    gap: $gap-xs;
+
+    button,
+    .group-dropdown-trigger {
+      background-color: $color-surface;
+      border: none;
+      z-index: 600;
+      border-radius: $radius;
+      padding: $gap-xs $gap-sm;
+      font-size: $fs-sm;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  #toggle-order {
+    position: relative;
+    padding-right: 1.6rem;
+
+    .arrow {
+      position: absolute;
+      right: 0.65rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.3rem;
+      transition: transform 0.25s ease;
+
+      &.up {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  .group-dropdown {
+    position: relative;
+
+    &.open .group-dropdown-menu {
+      display: block;
+      z-index: 500;
+    }
+
+    .group-dropdown-label {
+      padding-right: 0.7rem;
+    }
+
+    .group-dropdown-menu {
+      color: var(--highlight-color);
+      position: absolute;
+      top: calc(100% + 0.25rem);
+      right: 0;
+      min-width: 14rem;
+      background-color: $color-surface;
+      border-radius: $radius;
+      box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.12);
+      display: none;
+      z-index: 500;
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding: 0.75rem;
+        font-size: $fs-sm;
+        cursor: pointer;
+        border-radius: $radius;
+
+        &:hover {
+          background-color: var(--bg-mid);
+        }
+      }
+    }
+  }
+
+  /* ---------- Opportunity Card Wrapper (The Master Animation) ---------- */
+  .opportunity-card-wrapper {
+    margin: $gap-sm;
+    will-change: transform, opacity, max-height;
+    transition:
+      max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.3s ease,
+      margin 0.4s ease,
+      padding 0.4s ease;
+
+    max-height: 1500px;
+    opacity: 1;
+    overflow: visible;
+    padding-top: 10px; // Essential: allows the card to "lift" without clipping
+
+    // The collapse state
+    &.is-hidden-state {
+      max-height: 0 !important;
+      opacity: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      pointer-events: none;
+    }
+  }
+
+  /* ---------- Opportunity Card Content ---------- */
+  .opportunity-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: $gap-sm;
+    border-radius: $radius;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px) scale(1.015);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .opportunity-card-link {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .opportunity-card-header {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      z-index: 2;
+    }
+
+    .opportunity-title {
+      font-size: $fs-md;
+      margin: 0;
+      font-weight: 700;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+          color: var(--color-link);
+        }
+      }
+    }
+
+    .opportunity-deadline {
+      font-size: $fs-sm;
+      color: var(--text-muted);
+    }
+
+    .opportunity-meta {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: $gap-xs 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        font-size: $fs-xs;
+        padding: 0.25rem 0.5rem;
+        background-color: var(--surface-alt);
+        border-radius: $radius;
+
+        strong {
+          font-weight: 600;
+          color: var(--text-muted);
+          margin-right: 0.25rem;
+        }
+      }
+    }
+
+    .opportunity-summary {
+      grid-column: 1 / -1;
+      font-size: $fs-sm;
+      margin-top: $gap-xs;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 4px;
+      z-index: 10;
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        color: #ccc;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: var(--color-text-main);
+        }
+      }
+
+      .favorite-btn.is-active {
+        color: var(--color-text-main);
+
+        svg {
+          fill: var(--color-text-main);
+        }
+      }
+    }
+
+    .opportunity-card-links {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: flex-end;
+      gap: $gap-sm;
+      margin-top: $gap-sm;
+
+      a {
+        z-index: 2;
+        padding: 0.5rem 1rem;
+        font-size: $fs-sm;
+        text-decoration: none;
+        border-radius: $radius;
+        background-color: var(--bg-dim);
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  /* ---------- Inline Components ---------- */
+  .undo-inline-pill {
+    margin-left: auto;
+    font-size: $fs-md;
+    display: flex;
+    justify-content: right;
+    animation: pillFade 0.3s ease;
+    padding-right: $gap;
+
+    button {
+      background: none;
+      border: none;
+      text-decoration: underline;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+
+  .unhide-all-btn {
+    background: none;
+    border: 1px solid var(--color-text-main);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    cursor: pointer;
+
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+}
+
+@keyframes pillFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.due-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: $color-error;
+
+  border: none;
+  padding: 4px 6px;
+  border-radius: $radius;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+/* Pop-out Animation Utility */
+@keyframes popOut {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pop {
+  animation: popOut 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  display: inline-flex !important;
+  /* Force visibility when class is added */
+}
+
+.actions-group {
+  display: none; // Hidden by default
+  gap: 8px;
+  align-items: center;
+  padding-left: 12px;
+  margin-left: 4px;
+
+  &.animate-pop {
+    display: inline-flex !important; // Forces visibility when animated
+    animation: popOut 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+}
+
+.action-pill-btn {
+  cursor: pointer;
+  background: var(--bg-surface);
+  border: 1px solid #ddd;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #fdfdfd;
+    transform: translateY(-1px);
+  }
+
+  svg {
+    color: var(--color-success);
+  }
+}
+
+/* Ensure the pop animation works for the container */
+#favorites-actions.animate-pop {
+  display: inline-flex !important;
+}
+
+/* Layout Tiers */
+.opportunities-controls-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tier-organization {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.opportunities-search {
+  flex-grow: 1;
+  /* Fills remaining space */
+}
+
+.pod-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+.pod-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pod-divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--text-color);
+  margin: 0 0.5rem;
+}
+
+.group-dropdown-arrow {
+  position: absolute;
+  z-index: 800;
+  right: 12px;
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  pointer-events: none; 
+}
+
+.clear-filters-btn {
+  padding: $gap-xxs $gap-xs;
+  font-size: $fs-xs;
+  border-radius: 20px;
+}

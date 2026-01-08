@@ -7,6 +7,10 @@ collections:
     output: true
     permalink: /works/:title/
 
+  opportunities:
+    output: true
+    permalink: /opportunities/:slug/
+
 defaults:
   - scope:
       path: ""

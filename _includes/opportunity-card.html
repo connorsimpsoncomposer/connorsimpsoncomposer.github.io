@@ -1,0 +1,119 @@
+<div class="glass-pane card-lift-shadow opportunity-card{% if include.archive %} is-archived{% endif %}"
+     data-id="{{ include.opp.title | slugify }}-{{ include.opp.deadline | date: '%Y' }}"
+     data-deadline="{{ include.opp.deadline | date: '%Y-%m-%d' }}"
+     data-month="{{ include.opp.deadline | date: '%B %Y' }}"
+     data-more-info="{{ include.opp.more-info-link }}"
+     data-category="{{ include.opp.category | slugify }}"
+     data-location="{{ include.opp.location }}"
+     data-faculty="{{ include.opp.faculty | join: ', ' }}"
+     data-ensembles="{{ include.opp.ensembles | join: ', ' }}"
+     data-tuition="{{ include.opp.tuition | slugify }}"
+     data-funding="{{ include.opp.funding | slugify }}"
+     data-instrumentation="{{ include.opp.instrumentation | join: ', ' }}"
+     data-apply="{{ include.opp.apply-with }}">
+
+
+  {% if include.opp.url %}
+    <a href="{{ include.opp.url }}" class="opportunity-card-link"></a>
+  {% endif %}
+
+  <header class="opportunity-card-header">
+    <h3 class="opportunity-title">
+      <a href="{{ include.opp.url }}">{{ include.opp.title }}</a>
+    </h3>
+
+
+    <div class="card-actions">
+      <div class="calendar-actions">
+        <button class="calendar-btn" 
+                title="Add to Calendar"
+                onclick="window.downloadCalendarIcs([window.buildIcsEvent('{{ include.opp.title | escape }}', '{{ include.opp.deadline | date: '%Y-%m-%d' }}', '{{ site.url }}{{ include.opp.url }}')], '{{ include.opp.title | slugify }}')">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </button>
+      </div>
+      <button class="favorite-btn" 
+              data-id="{{ include.opp.title | slugify }}-{{ include.opp.deadline | date: '%Y' }}" 
+              aria-label="Favorite">
+        <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <button class="hide-btn" data-id="{{ include.opp.title | slugify }}-{{ include.opp.deadline | date: '%Y' }}" aria-label="Hide Opportunity">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  {% if include.opp.deadline %}
+    <span class="opportunity-deadline">
+      Deadline: {{ include.opp.deadline | date: "%b %-d, %Y" }}
+    </span>
+  {% endif %}
+
+  <ul class="opportunity-meta">
+
+    {% if include.opp.category %}
+      <li><strong>Category:</strong> {{ include.opp.category }}</li>
+    {% endif %}
+
+    {% if include.opp.location %}
+      <li><strong>Location:</strong> {{ include.opp.location }}</li>
+    {% endif %}
+
+    {% if include.opp.event-dates %}
+      <li><strong>Dates:</strong> {{ include.opp.event-dates }}</li>
+    {% endif %}
+
+    {% if include.opp.tuition %}
+      <li><strong>Tuition:</strong> {{ include.opp.tuition }}</li>
+    {% endif %}
+
+    {% if include.opp.funding %}
+      <li><strong>Funding:</strong> {{ include.opp.funding }}</li>
+    {% endif %}
+
+    {% if include.opp.travel-covered %}
+      <li><strong>Travel:</strong> {{ include.opp.travel-covered }}</li>
+    {% endif %}
+
+    {% if include.opp.instrumentation %}
+      <li><strong>Instrumentation:</strong> {{ include.opp.instrumentation }}</li>
+    {% endif %}
+
+    {% if include.opp.apply-with %}
+      <li><strong>Apply With:</strong> {{ include.opp.apply-with }}</li>
+    {% endif %}
+
+    {% if include.opp.eligibility %}
+      <li><strong>Eligibility:</strong> {{ include.opp.eligibility }}</li>
+    {% endif %}
+
+  </ul>
+
+  {% if include.opp.summary %}
+    <p class="opportunity-summary">
+      {{ include.opp.summary }}
+    </p>
+  {% endif %}
+
+
+  <footer class="opportunity-card-links">
+    {% if include.opp.more-info-link %}
+      <a class="opportunity-info-link" href="{{ include.opp.more-info-link }}">
+        Info →
+      </a>
+    {% endif %}
+
+    {% if include.opp.application-link %}
+      <a class="opportunity-apply-link" href="{{ include.opp.application-link }}">
+        Apply →
+      </a>
+    {% endif %}
+  </footer>
+
+</div>

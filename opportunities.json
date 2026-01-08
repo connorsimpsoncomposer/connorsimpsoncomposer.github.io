@@ -1,0 +1,30 @@
+---
+layout: null
+permalink: /opportunities.json
+---
+[
+  {% assign id = 0 %}
+  {% for opp in site.opportunities %}
+    {% assign id = id | plus: 1 %}
+    {
+      "id": {{ id }},
+      "title": {{ opp.title | jsonify }},
+      "category": {{ opp.category | jsonify }},
+      "deadline": {{ opp.deadline | date: "%Y-%m-%d" | jsonify }},
+      "event_dates": {{ opp.event-dates | jsonify }},
+      "location": {{ opp.location | jsonify }},
+      "faculty": {{ opp.faculty | jsonify }},
+      "ensembles": {{ opp.ensembles | jsonify }},
+      "tuition": {{ opp.tuition | jsonify }},
+      "funding": {{ opp.funding | jsonify }},
+      "travel_covered": {{ opp.travel-covered | jsonify }},
+      "instrumentation": {{ opp.instrumentation | jsonify }},
+      "apply_with": {{ opp.apply-with | jsonify }},
+      "eligibility": {{ opp.eligibility | jsonify }},
+      "more_info_link": {{ opp.more-info-link | jsonify }},
+      "application_link": {{ opp.application-link | jsonify }},
+      "summary": {{ opp.summary | jsonify }},
+      "url": {{ opp.url | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
