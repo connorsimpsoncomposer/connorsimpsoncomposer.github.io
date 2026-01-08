@@ -1,6 +1,5 @@
 /* === Typography === */
-$font-family-base: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
-$font-family-heading: $font-family-base;
+
 $font-weight-normal: 400;
 $font-weight-bold: 600;
 
@@ -69,8 +68,8 @@ $primary-muted: #bbbbbb;
 
 /* Semantic Roles */
 $color-bg: $gray-300;
-$color-surface: $gray-700;
-$color-surface-alt: $gray-400;
+$color-surface: $gray-800;
+$color-surface-alt: $gray-600;
 $color-bg-mid: $gray-600;
 $color-bg-dim: $gray-500;
 
@@ -97,7 +96,7 @@ $color-info: #2196f3;
 $dark-theme: (
   color-bg: $gray-700,
   color-surface: $gray-200,
-  color-surface-alt: $gray-500,
+  color-surface-alt: $gray-700,
   color-bg-mid: $gray-700,
   color-bg-dim: $gray-800,
   color-text: $gray-200,
@@ -115,7 +114,6 @@ $dark-theme: (
 
 /* === Root Export for CSS Variables === */
 :root {
-  --font-family: #{$font-family-base};
   --transition: #{$transition};
   --radius: #{$radius};
 

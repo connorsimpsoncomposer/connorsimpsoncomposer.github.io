@@ -6,17 +6,18 @@
 }
 
 .contact-form-container {
-  max-width: 520px;
+  max-width: 620px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
-  background: var(--accent-color);
   border-radius: 8px;
   color: var(--text-color);
+  margin-bottom: var(--gap-lg);
 }
 
 .contact-header {
   color: var(--surface);
   font-size: 1.8rem;
+  text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -64,7 +65,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: var(--surface);
-  background-color: var(--accent-muted);
+  background-color: var(--bg-dim);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -74,7 +75,7 @@
 
 .send-button button:hover,
 .send-button button:focus {
-  background-color: var(--bg-dim);
+  background-color: var(--surface-alt);
   outline: none;
 }
 

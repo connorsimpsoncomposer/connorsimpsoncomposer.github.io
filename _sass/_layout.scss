@@ -1,13 +1,9 @@
-/* Layout Structure */
-
-// Full-page flex column layout
 .body-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-// Wraps main content between header and footer
 .content-wrap {
   flex: 1;
   padding: 0;
@@ -35,7 +31,6 @@
   text-align: center;
 }
 
-/* Spacing */
 .mb-md {
   margin-bottom: var(--gap-md);
 }
@@ -49,7 +44,6 @@
   margin-right: var(--gap-md);
 }
 
-/* Typography */
 .text-center {
   text-align: center;
 }
@@ -66,26 +60,11 @@
   font-weight: 600;
 }
 
-/* Image Hover */
-.hover-float-shadow {
-  transition:
-    transform var(--transition),
-    box-shadow var(--transition);
-
-  &:hover,
-  &:focus {
-    transform: scale(1.03);
-    box-shadow: var(--shadow-md);
-  }
-}
-
-/* Image Style */
 .img-rounded {
   max-width: 100%;
   border-radius: var(--radius);
 }
 
-/* Underline Animation (already done) */
 .underline-animate {
   position: relative;
   text-decoration: none;

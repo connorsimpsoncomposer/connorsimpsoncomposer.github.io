@@ -1,14 +1,28 @@
+.svg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.index-box {
+  margin: var(--gap);
+}
+
 .index-content {
-  max-width: 880px;
-  padding-block: 2rem;
+  max-width: 920px;
   display: flex;
+  margin-bottom: var(--gap);
   flex-direction: column;
   justify-content: center;
-  min-height: 75vh;
+  min-height: 80vh;
 
   .index-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
 
     @media (max-width: 600px) {
@@ -17,17 +31,58 @@
   }
 
   .index-item {
+    overflow: visible;
     padding: var(--gap-sm);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 
-    p {
-      margin-top: $gap-xs;
-      margin-bottom: 0;
+    .home-image-link {
+      font-size: clamp(1rem, 4vw, 1.5rem);
       font-weight: bold;
-      font-size: $fs-md;
+      display: block;
+      position: relative;
+      width: 100%;
+      text-decoration: none;
+
+      .text-overlay {
+        position: relative;
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: var(--radius);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: var(--radius);
+
+          background: linear-gradient(to top,
+              rgba(0, 0, 0, 0.85) 0%,
+              rgba(0, 0, 0, 0.55) 30%,
+              rgba(0, 0, 0, 0.2) 65%,
+              transparent 100%);
+          z-index: 1;
+        }
+
+        .overlay-text {
+          position: absolute;
+          bottom: 0.75rem;
+          left: 1.25rem;
+          z-index: 2;
+          color: $gray-200;
+          font-weight: bold;
+          font-size: $fs-xl;
+          text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+          margin: 0;
+        }
+      }
     }
   }
 
@@ -35,6 +90,7 @@
     margin: var(--gap-sm);
     max-width: 600px;
     margin-inline: auto;
+    padding: 0 var(--gap-sm);
     text-align: center;
   }
 }

@@ -1,6 +1,13 @@
-/* _base.scss */
+body {
+  font-family: "Iosevka Term Web", monospace;
+  font-size: $fs-base;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-/* === RESET & GLOBAL === */
 *,
 *::before,
 *::after {
@@ -12,16 +19,7 @@
 html {
   font-size: 100%;
   scroll-behavior: smooth;
-}
-
-body {
-  font-family: $font-family-base;
-  font-size: $fs-base;
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-dim);
 }
 
 /* === TYPOGRAPHY === */

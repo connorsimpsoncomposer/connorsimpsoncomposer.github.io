@@ -5,26 +5,32 @@ body_class: index-page
 ---
 
 <section class="container index-content">
-  <div class="index-grid">
-    {% assign items = "listen,works,about,contact" | split: "," %}
-    {% for item in items %}
-      <div class="index-item">
-        <a href="{{ item }}/" class="hover-float-shadow">
-          <img src="_assets/images/{{ item }}-image.jpg" alt="{{ item }}" class="img-rounded hover-float-shadow" />
-        </a>
-        <a href="{{ item }}/" class="underline-animate">
-          <p>{{ item | capitalize }}</p>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
 
-  <div class="index-intro">
-    <p>Connor Simpson is a composer based in Rochester NY.</p>
-    <p>
-      <a href="mailto:connorsimpsoncomposer@gmail.com">
-        connorsimpsoncomposer@gmail.com
-      </a>
-    </p>
+  <div class="index-box glass-pane">
+
+    <div class="index-grid">
+      {% assign items = "listen,works,about,contact" | split: "," %}
+      {% for item in items %}
+
+        <div class="index-item">
+          <a href="{{ item }}/" class="home-image-link" aria-label="Go to {{ item | capitalize }} page">
+            <div class="text-overlay bw-hover-color">
+              <img src="_assets/images/{{ item }}-image.webp" alt="{{ item }}" fetchpriority="high" class="img-rounded" />
+              <p class="overlay-text">{{ item | capitalize }}</p>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="index-intro">
+      <p>Connor Simpson is a composer based in Rochester NY.</p>
+      <p>
+        <a href="mailto:csimpsoncomposer@gmail.com">
+          csimpsoncomposer@gmail.com
+        </a>
+      </p>
+    </div>
+
   </div>
 </section>
