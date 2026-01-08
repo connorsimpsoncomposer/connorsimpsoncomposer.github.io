@@ -1,23 +1,25 @@
 ---
 layout: opportunity
-title: RICEBERG New Music Festival
-category: Competition
-deadline: 2026-01-8
-dates: 04/05-09/05
-location: University of Central Florida
+title: Urban Soundscapes Call for Scores
+category: Call for Scores
+deadline: 2026-02-01
+month: February
+event-dates: 2026-05-20
+location: Lincoln Center, New York, NY
 faculty:
-  - Steven Mackey
-  - Sarah Kirkland Snider
+  - Julia Wolfe
+  - David Lang
 ensembles:
-  - Hub New Music
-  - CAMP
-tuition: "$2,400"
-funding: "No scholarships listed"
-instrumentation: Open
-apply-with: portfolio
-more-info-link: https://www.icebergnewmusic.com/institute
-application-link: https://www.icebergnewmusic.com/institute
-summary: ICEBERG is a multi-day new music institute hosted at UCF, focusing on close collaboration with performers and faculty composers.
+  - Bang on a Can All-Stars
+tuition: $0
+funding: no mention of scholarships/assistance
+travel-covered: no
+instrumentation: Amplified ensemble (Cl, Sax, Perc, Gtr, Pno, Db)
+apply-with:
+eligibility: Open to composers under the age of 35
+more-info-link: https://urban-soundscapes.com/call
+application-link: https://urban-soundscapes.com/submit
+summary: A prestigious opportunity to have your existing works performed by the Bang on a Can All-Stars in New York City. Selected composers will participate in a public panel discussion with Bang on a Can co-founders.
 ---
 
-ICEBERG is a multi-day new music institute hosted at UCF, focusing on close collaboration with performers and faculty composers.
+Urban Soundscapes seeks high-energy, amplified works that reflect the modern city environment. This is a performance-only opportunity intended to highlight emerging voices in the post-minimalist and experimental scenes.

@@ -9,13 +9,14 @@ location: # add location where opportunity will occur, with institute #
 faculty:
   # add faculty, prioritizing well known composers with attachments to acclaimed academic institutes #
   # e.g.
-  - Steven Mackey
-  - Sarah Kirkland Snider
+  - Composer Name
+  - Other Composer Name
 ensembles:
   # add performers/ensembles, prioritizing well known and acclaimed performers #
   # e.g.
-  - Hub New Music
-  - CAMP
+  - Named Ensemble
+  - Other Named Ensemble
+  - Yet Another Ensemble Name
 tuition: # add full cost of opportunity if it has a cost #
 funding: # note if the opportunity mentions scholarships/assistance, write as "fully-funded", "limited scholarships available" "no mention of scholarships/assistance" or similar #
 travel-covered: # yes/no

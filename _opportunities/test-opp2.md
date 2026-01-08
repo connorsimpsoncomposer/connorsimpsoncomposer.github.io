@@ -1,23 +1,25 @@
 ---
 layout: opportunity
-title: RICEBERG New Music Festival
-category: Competition
-deadline: 2026-01-31
-dates: 04/05-09/05
-location: University of Central Florida
+title: Villa Sereno Composers' Retreat
+category: Residency
+deadline: 2026-03-15
+month: March
+event-dates: 2026-10-01 to 2026-10-31
+location: Villa Sereno Institute, Tuscany, Italy
 faculty:
-  - Steven Mackey
-  - Sarah Kirkland Snider
+  - Kaija Saariaho (Emeritus Focus)
+  - Salvatore Sciarrino
 ensembles:
-  - Hub New Music
-  - CAMP
-tuition: "$2,400"
-funding: "No scholarships listed"
-instrumentation: Open
-apply-with: portfolio
-more-info-link: https://www.icebergnewmusic.com/institute
-application-link: https://www.icebergnewmusic.com/institute
-summary: ICEBERG is a multi-day new music institute hosted at UCF, focusing on close collaboration with performers and faculty composers.
+  - Quartetto di Cremona
+tuition: $0
+funding: fully-funded
+travel-covered: yes
+instrumentation: String Quartet or Solo Piano
+apply-with: apply with portfolio
+eligibility: Open to all composers over the age of 25
+more-info-link: https://example-residency.org/info
+application-link: https://example-residency.org/apply
+summary: An intensive one-month residency in the heart of Tuscany providing private studio space and daily workshops. Selected composers work directly with world-class faculty and the Quartetto di Cremona to develop a new work.
 ---
 
-ICEBERG is a multi-day new music institute hosted at UCF, focusing on close collaboration with performers and faculty composers.
+The Villa Sereno Composers' Retreat offers a peaceful, high-level environment for creative development. Residents receive private housing, all meals, and a dedicated workspace. The program culminates in a professionally recorded premiere of the works developed during the month.

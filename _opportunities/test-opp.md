@@ -1,23 +1,23 @@
 ---
 layout: opportunity
-title: NICEBERG New Music Festival
+title: Test New Music Festival
 category: Festival / Workshop
 deadline: 2026-01-16
 dates: 04/05-09/05
-location: University of Central Florida
+location: University of Orignal Name
 faculty:
-  - Steven Mackey
-  - Sarah Kirkland Snider
+  - John Deer
+  - Jane Hopper
 ensembles:
-  - Hub New Music
-  - CAMP
-tuition: "$2,400"
-funding: "No scholarships listed"
+  - Steel New Music
+  - Dolcemente
+tuition: $3000
+funding: none listed
 instrumentation: Open
 apply-with: portfolio
-more-info-link: https://www.icebergnewmusic.com/institute
-application-link: https://www.icebergnewmusic.com/institute
-summary: ICEBERG is a multi-day new music institute hosted at UCF, focusing on close collaboration with performers and faculty composers.
+more-info-link: www.connorsimpsonmusic.com/opportunities/
+application-link: www.connorsimpsonmusic.com/opportunities/
+summary: Test New Music Festival is a multi-day new music institute hosted at UON, focusing on close collaboration with performers and faculty composers.
 ---
 
-ICEBERG is a multi-day new music institute hosted at UCF, focusing on close collaboration with performers and faculty composers.
+Test New Music Festival is a multi-day new music institute hosted at UON, focusing on close collaboration with performers and faculty composers.
