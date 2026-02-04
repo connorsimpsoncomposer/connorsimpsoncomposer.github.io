@@ -63,27 +63,28 @@ layout: default
           </div>
         {% endif %}
 
-        {% if page.score_url %}
-        <div class="score">
-          <a href="{{ page.score_url }}">View Score</a>
-        </div>
-        {% endif %}
+        <div class="score-buttons-container">
+          {% if page.score_url %}
+          <div class="score">
+            <a class="custom-button btn-lift" href="{{ page.score_url }}">Preview Score</a>
+          </div>
+          {% endif %}
 
-        {% if page.purchase_url %}
-        <div class="jwpepper-plug">
-          <p>
-            Score available for purchase on
-            <a href="{{ page.purchase_url }}">{{ page.purchase_label | default: "JW Pepper" }}</a>
-          </p>
+          {% if page.purchase_url %}
+          <div class="jwpepper-plug">
+            <a class="custom-button btn-lift" href="{{ page.purchase_url }}">Purchase Score</a>
+            <!-- if adding purchase label for different purchase sites eg. jw pepper use below -->
+            <!--  page.purchase_label | default: "JW Pepper"  -->
+          </div>
+          {% endif %}
         </div>
-        {% endif %}
 
         {% if page.soundcloud_url %}
           {% include soundcloud-player.html url=page.soundcloud_url %}
         {% endif %}
 
         <div class="contact-for-performance">
-          <p>If interested in performing this work, contact me at <a href="mailto:csimpsoncomposer@gmail.com">csimpsoncomposer@gmail.com</a>.</p>
+          <p>If interested in performing this work, let me know at <a href="mailto:csimpsoncomposer@gmail.com">csimpsoncomposer@gmail.com</a>.</p>
         </div>
 
       </div>

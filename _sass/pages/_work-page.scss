@@ -216,7 +216,6 @@
 
 .score {
   text-align: center;
-  margin-bottom: var(--gap);
 }
 
 .contact-for-performance {
@@ -317,4 +316,18 @@
   .work-body {
     max-width: 100%;
   }
+}
+
+.score-buttons-container {
+  display: flex !important;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.score,
+.jwpepper-plug {
+  display: inline-block;
 }
