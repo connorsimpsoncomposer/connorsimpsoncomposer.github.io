@@ -7,14 +7,19 @@
 .biogrid {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-lg);
   margin: var(--gap);
 }
 
-.biobox-wrapper,
-.headshotbox-wrapper {
-  display: flex;
-  justify-content: center;
+.biobox-wrapper {
+  flex: 1 1 auto;
+  min-width: 0;
+  align-items: flex-start;
 }
+
+
 
 .biobox {
   padding: 1rem;
@@ -35,19 +40,32 @@
   font-weight: 400;
 }
 
+.biobox a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--accent-surface);
+}
+
+.biobox a:hover {
+  text-decoration: underline;
+}
+
 .headshotbox-wrapper {
+  flex: 0 0 400px;
   display: flex;
-  justify-content: center;
-  align-items: flex-start; // <- prevent vertical stretch
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+  gap: var(--gap);
 }
 
 .headshotbox {
-  width: 400px;
+  width: 100%;
+  max-width: 400px; 
   aspect-ratio: 3/4;
   border-radius: 8px;
   overflow: hidden;
   margin: var(--gap-sm);
-  margin-top: $gap-xxl;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -58,14 +76,37 @@
   display: block;
 }
 
+.about-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  align-items: center;
+  width: 100%;
+}
+
+.custom-button {
+  text-align: center;
+  display: inline-block;
+  background-color: var(--bg-dim);
+  text-decoration: none;
+  color: var(--surface);
+  border-radius: $radius-pill;
+  padding: $gap-xs $gap-sm;
+}
+
 @media (max-width: 920px) {
   .biogrid {
     flex-direction: column;
-    margin: var(--gap);
+    align-items: center;
+  }
+
+  .headshotbox-wrapper {
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 400px;
   }
 
   .headshotbox {
-    margin-top: 0;
-    margin-bottom: var(--gap);
+    width: 100%;
   }
 }
