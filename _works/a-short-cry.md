@@ -6,7 +6,7 @@ categories:
   - Solo
 instrumentation: Solo Violin
 instruments: Violin, Solo
-blurb: Premiered 2023 by Ciara McGuire as a part of the Jang/Composition Collaboration
+blurb: Premiered 2025 by Ciara McGuire as a part of the Jang/Composition Collaboration
 youtube_id: -ytDBvh7L_g
 score_url: /scores/a-short-cry.pdf
 program_notes: >
