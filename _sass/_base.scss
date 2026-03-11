@@ -2,10 +2,14 @@ body {
   font-family: "Figtree", sans-serif;
   font-size: $fs-base;
   color: var(--text-color);
-  background-color: var(--bg-color);
+  background-color: var(--bg-dim);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.body-container {
+  background-color: var(--bg-color);
 }
 
 *,

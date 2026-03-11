@@ -72,7 +72,7 @@
   }
 }
 
-.menu-toggle-checkbox:checked~.navbar {
+.menu-toggle-checkbox:checked ~ .navbar {
   transform: translateX(0%);
 }
 
@@ -128,7 +128,7 @@
 .site-footer {
   padding-top: $gap-sm;
   padding-bottom: $gap-xs;
-  background-color: var(--accent-color);
+  background-color: var(--bg-dim);
   text-align: center;
   user-select: none;
 }
