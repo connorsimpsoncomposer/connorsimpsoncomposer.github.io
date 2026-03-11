@@ -99,8 +99,8 @@
 
 .work-item .title p,
 .work-item .instrumentation p {
-  color: var(--surface);
   margin: 0;
+  color: var(--text-color);
   /* Remove vertical margins */
 }
 
@@ -285,27 +285,25 @@
 
   .back-to-works {
     margin-left: auto;
+    width: fit-content;
+    margin-right: 1rem;
     color: var(--bg-color);
     display: block;
-    padding: 0.6rem;
-    font-size: 1rem;
+    padding: 0.5rem;
+    font-size: 0.95rem;
     font-weight: 600;
     background-color: var(--bg-dim);
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    min-width: 150px;
     text-align: center;
     text-decoration: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    color: var(--surface);
     transition:
       background-color var(--transition),
       box-shadow var(--transition);
-  }
-
-  .work-body .back-to-works {
-    color: var(--text-color);
-    text-decoration: none;
   }
 
   .works-page-container {

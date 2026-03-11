@@ -60,6 +60,7 @@ $gray-550: #696969;
 $gray-600: #555555;
 $gray-700: #333333;
 $gray-800: #222222;
+$black: #111111;
 
 /* Primary Accent */
 $primary: #a0a0a0;
@@ -68,10 +69,10 @@ $primary-muted: #bbbbbb;
 
 /* Semantic Roles */
 $color-bg: $gray-300;
-$color-surface: $gray-800;
+$color-surface: $gray-200;
 $color-surface-alt: $gray-600;
 $color-bg-mid: $gray-600;
-$color-bg-dim: $gray-500;
+$color-bg-dim: $black;
 
 $color-text: $gray-700;
 $color-text-heading: $gray-800;

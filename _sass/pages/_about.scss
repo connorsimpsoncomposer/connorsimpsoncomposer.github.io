@@ -87,13 +87,17 @@
 }
 
 .custom-button {
+  color: var(--surface);
   text-align: center;
   display: inline-block;
   background-color: var(--bg-dim);
   text-decoration: none;
-  color: var(--surface);
   border-radius: $radius-pill;
   padding: $gap-xs $gap-sm;
+}
+
+.custom-button:hover {
+  color: var(--surface);
 }
 
 @media (max-width: 900px) {
